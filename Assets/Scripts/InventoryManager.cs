@@ -27,7 +27,6 @@ public class InventoryManager : MonoBehaviour
     {
         if (collision.tag == "Collectible")
         {
-            Debug.Log("1");
             if (Input.GetKey(KeyCode.Mouse0)) //LEFT MOUSE BUTTON PRESSED
             {
                 collected_obj = collision.gameObject;
