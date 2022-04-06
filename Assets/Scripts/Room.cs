@@ -6,16 +6,7 @@ public class Room : MonoBehaviour
 {
     public Room roomToTheLeft;
     public Room roomToTheRight;
-    
 
-    void Start()
-    {
-        
-    }
+    public Transform background;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
