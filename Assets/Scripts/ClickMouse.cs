@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class ClickMouse : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //public InventoryManager inventoryManager;
+    InventoryManager inventoryManager;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        inventoryManager = FindObjectOfType<InventoryManager>();
+        inventoryManager.CollectObject();
     }
 }
