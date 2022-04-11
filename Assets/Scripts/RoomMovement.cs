@@ -5,10 +5,11 @@ using UnityEngine;
 public class RoomMovement : MonoBehaviour
 {
     public Room currentRoom;
+    public int horizontal_shift = 1;
 
     public void Awake()
     {
-        Camera.main.transform.position = currentRoom.background.position + new Vector3 (0, 0, -1);
+        Camera.main.transform.position = currentRoom.background.position + new Vector3 (horizontal_shift, 0, -1);
     }
 
     private void Update()
@@ -22,7 +23,7 @@ public class RoomMovement : MonoBehaviour
         Room rightRoom = currentRoom.roomToTheRight;
         currentRoom = rightRoom;
 
-        Camera.main.transform.position = currentRoom.background.position + new Vector3(0, 0, -1);
+        Camera.main.transform.position = currentRoom.background.position + new Vector3(horizontal_shift, 0, -1);
   
     }
 
@@ -31,7 +32,7 @@ public class RoomMovement : MonoBehaviour
         Room leftRoom = currentRoom.roomToTheLeft;
         currentRoom = leftRoom;
 
-        Camera.main.transform.position = currentRoom.background.position + new Vector3(0, 0, -1);
+        Camera.main.transform.position = currentRoom.background.position + new Vector3(horizontal_shift, 0, -1);
     
     }
 

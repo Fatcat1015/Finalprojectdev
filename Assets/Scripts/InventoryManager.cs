@@ -10,6 +10,7 @@ public class InventoryManager : MonoBehaviour
     public bool Matches;
     public bool SilverCoin;
     public bool Balloon;
+    public bool Record;
     //public bool Balloon;
 
     private BoxCollider2D cursor;
@@ -17,6 +18,7 @@ public class InventoryManager : MonoBehaviour
     private void Start()
     {
         cursor = GetComponent<BoxCollider2D>();
+        GetComponent<BoxCollider2D>().isTrigger = true;
     }
 
     private void Update()
@@ -57,11 +59,20 @@ public class InventoryManager : MonoBehaviour
                     Balloon = true;
                     break;
 
-                default:
+                case "Record":
+                    Record = true;
+                    break;
+
+            default:
                     break;
             }
         Destroy(collected_obj);
         collected_obj = null;
+
+    }
+
+    private void put_in_inventory(string object_name)
+    {
 
     }
 }
