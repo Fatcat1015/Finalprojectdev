@@ -10,7 +10,7 @@ public class InventoryManager : MonoBehaviour
     public bool Matches;
     public bool SilverCoin;
     public bool Balloon;
-    public bool Balloon;
+    //public bool Balloon;
 
     private BoxCollider2D cursor;
 
