@@ -9,8 +9,46 @@ public class InventoryManager : MonoBehaviour
     public bool Knife;
     public bool Matches;
     public bool SilverCoin;
-    public bool Balloon;
+    public bool BalloonDeflected;
+    public bool BalloonWithWater;
+    public bool BalloonWithIce;
     public bool Record;
+    public bool Gastube;
+    public bool KettleEmpty;
+    public bool KettleWithWater;
+    public bool Pistol;
+    public bool GlassShard;
+    public bool GumUnchewed;
+    public bool GumChewed;
+    public bool Flag1;
+    public bool Flag2;
+    public bool Flag3;
+    public bool Wire;
+    public bool Battery1;
+    public bool Battery2;
+    public bool Cube;
+    public bool Fish;
+    public bool Bolt;
+    public bool Fly;
+    public bool Stamp1;
+    public bool Stamp2;
+    public bool Stamp3;
+    public bool Stamp4;
+    public bool Icecubes;
+    public bool Timer;
+    public bool Needle;
+    public bool ScrewDriver;
+    public bool Key1;
+    public bool Key2;
+    public bool Gin;
+
+
+
+
+
+
+
+    // if collected
     //public bool Balloon;
 
     private BoxCollider2D cursor;
@@ -55,13 +93,134 @@ public class InventoryManager : MonoBehaviour
                     SilverCoin = true;
                     break;
 
-                case "Balloon":
-                    Balloon = true;
+                case "BalloonDelfected":
+                    BalloonDeflected = true;
+                    break;
+
+                case "BalloonWithWater":
+                    BalloonWithWater = true;
+                    break;
+
+                case "BalloonWithIce":
+                    BalloonWithIce = true;
                     break;
 
                 case "Record":
                     Record = true;
                     break;
+
+                case "Gastube":
+                    Gastube = true;
+                    break;
+                
+                case "KettleEmpty":
+                    KettleEmpty= true;
+                    break;
+
+                case "KettleWithWater":
+                    KettleWithWater= true;
+                    break;
+
+                case "Pistol":
+                    Pistol= true;
+                    break;
+
+                case "GlassShard":
+                    GlassShard = true;
+                    break;
+
+                case "GumUnchewed":
+                    GumUnchewed= true;
+                    break;
+
+                case "GumChewed":
+                    GumChewed = true;
+                    break;
+
+                case "Flag1":
+                    Flag1= true;
+                    break;
+                
+                case "Flag2":
+                    Flag2 = true;
+                    break;
+
+                case "Flag3":
+                    Flag3= true;
+                    break;
+                
+                case "Wire":
+                     Wire= true;
+                    break;
+
+                case "Battery1":
+                    Battery1 = true;
+                    break;
+
+                case "Battery2":
+                    Battery2 = true;
+                    break;
+
+                case "Cube":
+                    Cube = true;
+                    break;
+
+                case "Fish":
+                    Fish= true;
+                    break;
+
+                case "Bolt":
+                    Bolt = true;
+                    break;
+
+                case "Fly":
+                    Fly= true;
+                    break;
+
+                case "Stamp1":
+                    Stamp1= true;
+                    break;
+
+                case "Stamp2":
+                    Stamp2 = true;
+                    break;
+
+                case "Stamp3":
+                   Stamp3  = true;
+                    break;
+
+                case "Stamp4":
+                    Stamp4 = true;
+                    break;
+
+                case "Icecubes":
+                     Icecubes= true;
+                    break;
+
+                case "Timer":
+                    Timer = true;
+                    break;
+
+                case "Needle":
+                    Needle = true;
+                    break;
+
+                case "ScrewDriver":
+                    ScrewDriver = true;
+                    break;
+
+                case "Key1":
+                    Key1= true;
+                    break;
+
+                case "Key2":
+                    Key2 = true;
+                    break;
+
+                case "Gin":
+                    Gin = true;
+                    break;
+
 
             default:
                     break;

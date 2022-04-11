@@ -2442,8 +2442,38 @@ MonoBehaviour:
   Knife: 0
   Matches: 0
   SilverCoin: 0
-  Balloon: 0
+  BalloonDeflected: 0
+  BalloonWithWater: 0
+  BalloonWithIce: 0
   Record: 0
+  Gastube: 0
+  KettleEmpty: 0
+  KettleWithWater: 0
+  Pistol: 0
+  GlassShard: 0
+  GumUnchewed: 0
+  GumChewed: 0
+  Flag1: 0
+  Flag2: 0
+  Flag3: 0
+  Wire: 0
+  Battery1: 0
+  Battery2: 0
+  Cube: 0
+  Fish: 0
+  Bolt: 0
+  Fly: 0
+  Stamp1: 0
+  Stamp2: 0
+  Stamp3: 0
+  Stamp4: 0
+  Icecubes: 0
+  Timer: 0
+  Needle: 0
+  ScrewDriver: 0
+  Key1: 0
+  Key2: 0
+  Gin: 0
 --- !u!61 &1976362091
 BoxCollider2D:
   m_ObjectHideFlags: 0

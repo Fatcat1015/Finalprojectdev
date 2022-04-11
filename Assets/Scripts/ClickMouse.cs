@@ -11,5 +11,6 @@ public class ClickMouse : MonoBehaviour
     {
         inventoryManager = FindObjectOfType<InventoryManager>();
         inventoryManager.CollectObject();
+
     }
 }
