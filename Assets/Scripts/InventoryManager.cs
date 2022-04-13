@@ -43,11 +43,6 @@ public class InventoryManager : MonoBehaviour
     public bool Gin;
 
 
-
-
-
-
-
     // if collected
     //public bool Balloon;
 
@@ -61,12 +56,12 @@ public class InventoryManager : MonoBehaviour
 
     private void Update()
     {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//make object follow mouse
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//make object follow mouse
     }
 
     private void OnTriggerStay2D(Collider2D collision)//when collided with collectible
     {
-        if (collision.tag == "Collectible")
+        if (collision.tag == "Collectable")
         {
             if (Input.GetKey(KeyCode.Mouse0)) //LEFT MOUSE BUTTON PRESSED
             {
@@ -74,7 +69,7 @@ public class InventoryManager : MonoBehaviour
                 CollectObject();
             }
         }
-            
+
     }
 
     public void CollectObject()
