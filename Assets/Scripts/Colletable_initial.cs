@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
-public class Colletible_initial : MonoBehaviour
+public class Colletable_initial : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
