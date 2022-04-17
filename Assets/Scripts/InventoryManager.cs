@@ -5,6 +5,10 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class InventoryManager : MonoBehaviour
 {
+    private Inventory inventory;
+    public GameObject itemButton;
+
+    [Header("Collectibles")]
     GameObject collected_obj;
     public bool Knife;
     public bool Matches;
@@ -52,6 +56,8 @@ public class InventoryManager : MonoBehaviour
     {
         cursor = GetComponent<BoxCollider2D>();
         GetComponent<BoxCollider2D>().isTrigger = true;
+
+        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     private void Update()
@@ -227,6 +233,14 @@ public class InventoryManager : MonoBehaviour
 
     private void put_in_inventory(string object_name)
     {
-
+        for (int i = 0; i < inventory.slots.Length; i++)
+        {
+            if (inventory.isFull[i] == false)
+            {
+                inventory.isFull[i] = true;
+                Instantiate(itemButton, inventory.slots[i].transform, false);
+                break;
+            }
+        }
     }
 }
