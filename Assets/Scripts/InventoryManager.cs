@@ -233,13 +233,7 @@ public class InventoryManager : MonoBehaviour
             default:
                     break;
             }
-        Destroy(collected_obj);
-        collected_obj = null;
 
-    }
-
-    private void put_in_inventory(string object_name)
-    {
         for (int i = 0; i < inventory.slots.Length; i++)
         {
             if (inventory.isFull[i] == false)
@@ -249,5 +243,8 @@ public class InventoryManager : MonoBehaviour
                 break;
             }
         }
+        Destroy(collected_obj);
+        collected_obj = null;
+
     }
 }
