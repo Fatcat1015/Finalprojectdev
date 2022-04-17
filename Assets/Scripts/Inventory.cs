@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public bool[] isFull;
+    public GameObject[] slots;
+
 
     public List<GameObject> allObjectPrefabs = new List<GameObject>();
     [HideInInspector] public List<Object> inventoryObjects = new List<Object>();
