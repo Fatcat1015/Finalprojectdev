@@ -11,31 +11,37 @@ public class InventoryManager : MonoBehaviour
     public bool SilverCoin;
     public bool BalloonDeflected;
     public bool BalloonWithWater;
+
     public bool BalloonWithIce;
     public bool Record;
     public bool Gastube;
     public bool KettleEmpty;
     public bool KettleWithWater;
+
     public bool Pistol;
     public bool GlassShard;
     public bool GumUnchewed;
     public bool GumChewed;
     public bool Flag1;
+
     public bool Flag2;
     public bool Flag3;
     public bool Wire;
     public bool Battery1;
     public bool Battery2;
+
     public bool Cube;
     public bool Fish;
     public bool Bolt;
     public bool Fly;
     public bool Stamp1;
+
     public bool Stamp2;
     public bool Stamp3;
     public bool Stamp4;
     public bool Icecubes;
     public bool Timer;
+
     public bool Needle;
     public bool ScrewDriver;
     public bool Key1;
@@ -76,6 +82,7 @@ public class InventoryManager : MonoBehaviour
         {
             switch (collected_obj.name)
             {
+            //
                 case "Knife":
                     Knife = true;
                     break;
@@ -88,7 +95,7 @@ public class InventoryManager : MonoBehaviour
                     SilverCoin = true;
                     break;
 
-                case "BalloonDelfected":
+                case "BalloonDeflected":
                     BalloonDeflected = true;
                     break;
 
