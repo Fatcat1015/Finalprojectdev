@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/StartScreen.unity
+    guid: e0cc15d731e915440bd51cb6b378ba97
   - enabled: 1
     path: Assets/Scenes/Main.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    guid: 120972433e824430c83ebc90f9bf1b77
+  - enabled: 1
+    path: Assets/Scenes/cakeminigame.unity
+    guid: 67bf7364973be4896b07a56c563ceae5
   m_configObjects: {}
