@@ -5,15 +5,20 @@ using UnityEngine;
 public class ClickMouse : MonoBehaviour
 {
     //public InventoryManager inventoryManager;
-    InventoryManager inventoryManager;
+    //InventoryManager inventoryManager;
     GameObject collected_obj;
     private BoxCollider2D cursor;
 
+    GameObject inventory;
+    public GameObject item;
+
+    public GameObject item_holding;
     private void Start()
     {
         cursor = GetComponent<BoxCollider2D>();
         GetComponent<BoxCollider2D>().isTrigger = true;
-        inventoryManager = FindObjectOfType<InventoryManager>();
+        inventory = GameObject.FindGameObjectWithTag("InventManager");
+        
     }
     private void Update()
     {
@@ -27,12 +32,28 @@ public class ClickMouse : MonoBehaviour
         {
             if (Input.GetKey(KeyCode.Mouse0)) //LEFT MOUSE BUTTON PRESSED
             {
-                Debug.Log("mouse pressed");
                 collected_obj = collision.gameObject;
-                Debug.Log("object assigned");
-                inventoryManager.CollectObject();
-                Debug.Log("running function");
+                inventory.GetComponent<Inventory2_0>().AddItem(collected_obj.name);
+                Destroy(collected_obj);
+                //inventoryManager.CollectObject();
             }
         }
+
+        if (collision.tag == "Interact")
+        {
+            if (Input.GetKey(KeyCode.Mouse0)&&item != null)
+            {
+                if(collision.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
+                {
+                    collision.gameObject.GetComponent<InteractScript>().interacted = true;
+                    Destroy(item);
+                }
+            }
+        }
+    }
+
+    public void UseItem(GameObject item_picked)
+    {
+        item = item_picked;
     }
 }

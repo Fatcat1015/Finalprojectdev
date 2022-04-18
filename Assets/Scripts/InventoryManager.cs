@@ -84,6 +84,11 @@ public class InventoryManager : MonoBehaviour
 
     }
 
+    public void useObject()
+    {
+        ;
+    }
+
     public void CollectObject()
         {
             switch (collected_obj.name)
