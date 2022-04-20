@@ -467,8 +467,8 @@ ScriptedImporter:
     uvTransform: {x: 2532, y: -67}
   - name: Open Fridge
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.28890455, y: 0.5}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -533,8 +533,8 @@ ScriptedImporter:
     uvTransform: {x: 2412, y: 221}
   - name: Gin Cabinet Open
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.294782, y: 0.5}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2

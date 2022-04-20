@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//not using this 
 public class Inventory : MonoBehaviour
 {
+
     public bool[] isFull;
     public GameObject[] slots;
 
