@@ -126,6 +126,60 @@ public class ClickMouse : MonoBehaviour
             }
         }
 
+        //if (collision.tag == "FurnitureInteract")//click on furniture to interact (for example: opening drawerscabinets)
+        //{
+
+        //    if (Input.GetKeyDown(KeyCode.Mouse0))
+        //    {
+        //        Debug.Log("clicked");
+
+
+        //        if (!collision.gameObject.GetComponent<FurnitureInteractive>().open)
+        //        {
+
+        //            collision.gameObject.GetComponent<FurnitureInteractive>().open = true;
+        //            Debug.Log(collision.gameObject.GetComponent<FurnitureInteractive>().open);
+
+
+
+        //            //This turns the image of the interior object on.
+        //            //SpriteRenderer interiorRenderer = collision.gameObject.GetComponentInChildren<SpriteRenderer>();
+        //            //interiorRenderer.enabled = true;
+
+        //            if (collision.gameObject.GetComponent<FurnitureInteractive>().hasChild)
+        //            {
+        //                collision.gameObject.GetComponent<FurnitureInteractive>().makeChildVisible();
+        //            }
+
+
+        //            //This is to get access to the gameobject
+        //            //Transform interiorTransform = collision.gameObject.GetComponentInChildren<Transform>();
+        //            //GameObject interiorObject = interiorTransform.gameObject;
+        //            return;
+        //        }
+
+        //        if (collision.gameObject.GetComponent<FurnitureInteractive>().open)
+        //        {
+
+        //            Debug.Log("now closed");
+        //            collision.gameObject.GetComponent<FurnitureInteractive>().open = false;
+
+        //            if (collision.gameObject.GetComponent<FurnitureInteractive>().hasChild)
+        //            {
+        //                collision.gameObject.GetComponent<FurnitureInteractive>().makeChildInvisible();
+        //            }
+        //            return;
+
+        //        }
+
+
+        //    }
+        //}
+    }
+
+    public void OnTriggerEnter2D(Collider2D collision)//when collided with collectable
+    {
+
         if (collision.tag == "FurnitureInteract")//click on furniture to interact (for example: opening drawerscabinets)
         {
 
@@ -175,6 +229,7 @@ public class ClickMouse : MonoBehaviour
 
             }
         }
+
     }
 
     public void UseItem(GameObject item_picked)
