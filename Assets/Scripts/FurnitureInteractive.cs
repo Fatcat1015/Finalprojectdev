@@ -19,26 +19,19 @@ public class FurnitureInteractive : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (open)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
+            if(childObject != null)childObject.SetActive(true);
         }
 
-        if (!open)
+        else 
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = before;
+            if (childObject != null) childObject.SetActive(false);
+            
         }
     }
-    public void makeChildVisible(){
-
-        childObject.GetComponent<SpriteRenderer>().enabled = true;
-    }
-
-    public void makeChildInvisible()
-    {
-        childObject.GetComponent<SpriteRenderer>().enabled = false;
-    }
-
 }
