@@ -11,6 +11,10 @@ public class FurnitureInteractive : MonoBehaviour
     public bool hasChild;
     public GameObject childObject;
 
+    public AudioSource myAudioSource;
+
+
+    bool alreadyPlayed = false;
     //public string Activatedby;
     void Start()
     {
@@ -18,6 +22,8 @@ public class FurnitureInteractive : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
         GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+
+        myAudioSource = GetComponent<AudioSource>();
     }
 
     private void FixedUpdate()
@@ -25,14 +31,22 @@ public class FurnitureInteractive : MonoBehaviour
         if (open)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
-            if(childObject != null)childObject.SetActive(true);
+            if (childObject != null) childObject.SetActive(true);
+            if (!alreadyPlayed)
+            {
+
+                myAudioSource.Play();
+                alreadyPlayed = true;
+            }
         }
 
-        else 
+        else
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = before;
             if (childObject != null) childObject.SetActive(false);
-            
+            myAudioSource.Stop();
+            alreadyPlayed = false;
+
         }
     }
 }
