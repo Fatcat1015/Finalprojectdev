@@ -115,6 +115,10 @@ public class ClickMouse : MonoBehaviour
                             StartCoroutine(waittime());
                         }
                     }
+                }else if (collision.tag == "Zoom")
+                { 
+                    RoomMovement rm = FindObjectOfType<RoomMovement>();
+                    rm.zoomin(collision.gameObject.transform.GetChild(0).transform);
                 }
             }
         }

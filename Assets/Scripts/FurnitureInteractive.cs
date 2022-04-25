@@ -15,6 +15,7 @@ public class FurnitureInteractive : MonoBehaviour
     public bool destroy_once_activated;
 
     private Animator ani;
+    [SerializeField] private int interval = 2;
 
     bool alreadyPlayed = false;
     //public string Activatedby;
@@ -68,7 +69,7 @@ public class FurnitureInteractive : MonoBehaviour
     private IEnumerator destroy()
     {
         if(ani != null) ani.SetBool("Activate", true);
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(interval);
         if (childObject != null)
         {
             childObject.SetActive(true);
