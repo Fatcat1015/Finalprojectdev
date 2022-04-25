@@ -18,6 +18,8 @@ public class ClickMouse : MonoBehaviour
     Camera mainCamera;
 
     bool interacting;
+    public bool interact_furniture;
+    FurnitureInteractive Finteractive;
 
     private void Awake()
     {
@@ -36,45 +38,66 @@ public class ClickMouse : MonoBehaviour
     private void Update()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//make object follow mouse
-    }
 
-
-
-    public void OnTriggerStay2D(Collider2D collision)//when collided with collectable
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (interact_furniture)
         {
-            if (collision.tag == "FurnitureInteract")
+            if (Input.GetMouseButtonDown(0))
             {
-                if (!collision.gameObject.GetComponent<FurnitureInteractive>().open)
+                if (!Finteractive.open)
                 {
-                    collision.gameObject.GetComponent<FurnitureInteractive>().open = true;
+                    Finteractive.open = true;
                 }
                 else
                 {
-                    collision.gameObject.GetComponent<FurnitureInteractive>().open = false;
+                    Finteractive.open = false;
                 }
             }
+        }
+    }
 
-            if (collision.tag == "Collectable")
-            {
-                collected_obj = collision.gameObject;
-                inventory.GetComponent<Inventory2_0>().AddItem(collected_obj.name);
-                Destroy(collected_obj);
-            }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "FurnitureInteract")
+        {
+            interact_furniture = true;
+            Finteractive = collision.gameObject.GetComponent<FurnitureInteractive>();
+        }
 
-            if (collision.tag == "Interact")//place item in puzzles
+    }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "FurnitureInteract") interact_furniture = false ;
+    }
+
+    public void OnTriggerStay2D(Collider2D collision)//when collided with collectable
+    {
+        if(collision != null)
+        {
+            //Debug.Log("m");
+            if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
             {
-                if (item != null)
+                if (collision.tag == "Collectable")
                 {
-                    if (collision.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
+                    collected_obj = collision.gameObject;
+                    inventory.GetComponent<Inventory2_0>().AddItem(collected_obj.name);
+                    Destroy(collected_obj);
+                }
+
+                else if (collision.tag == "Interact")//place item in puzzles
+                {
+                    if (item != null)
                     {
-                        collision.gameObject.GetComponent<InteractScript>().interacted = true;
-                        Destroy(item);
+                        if (collision.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
+                        {
+                            collision.gameObject.GetComponent<InteractScript>().interacted = true;
+                            Destroy(item);
+                        }
                     }
                 }
             }
         }
+        
     }
 
     public void UseItem(GameObject item_picked)
