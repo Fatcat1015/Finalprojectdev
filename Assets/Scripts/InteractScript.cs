@@ -11,6 +11,8 @@ public class InteractScript : MonoBehaviour
     public bool destory_once_interacted;
     public Animator ani;
 
+    [SerializeField] private int interval = 1;
+
     public string Activatedby;
     void Start()
     {
@@ -19,7 +21,7 @@ public class InteractScript : MonoBehaviour
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
         if (transform.childCount != 0)
         {
-            Debug.Log(transform.childCount);
+            //Debug.Log(transform.childCount);
             transform.GetChild(0).gameObject.SetActive(false);
         }
         
@@ -32,21 +34,25 @@ public class InteractScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
             if (destory_once_interacted)
             {
-                //if(ani != null)
-                StartCoroutine(activate_once());
+                
+                StartCoroutine(activate_once(interval));
             }
         }
         
     }
 
-    private IEnumerator activate_once()
+    private IEnumerator activate_once(int seconds)
     {
         
-        yield return new WaitForSeconds(1);
-        GameObject child = transform.GetChild(0).gameObject;
-        child.SetActive(true);
-        child.transform.SetParent(null);
-        Destroy(gameObject);
+        yield return new WaitForSeconds(seconds);
+        if (transform.childCount != 0)
+        {
+            GameObject child = transform.GetChild(0).gameObject;
+            child.SetActive(true);
+            child.transform.SetParent(null);
+            Destroy(gameObject);
+        }
+       
         yield return null;
     }
 }

@@ -38,8 +38,10 @@ public class FurnitureInteractive : MonoBehaviour
 
             if (!alreadyPlayed)
             {
-
-                myAudioSource.Play();
+                if(myAudioSource!= null)
+                {
+                    myAudioSource.Play();
+                }
                 alreadyPlayed = true;
             }
 
@@ -57,7 +59,7 @@ public class FurnitureInteractive : MonoBehaviour
         { 
             gameObject.GetComponent<SpriteRenderer>().sprite = before;
             if (childObject != null) childObject.SetActive(false);
-            myAudioSource.Stop();
+            if (myAudioSource != null)myAudioSource.Stop();
             alreadyPlayed = false;
 
         }
@@ -67,8 +69,11 @@ public class FurnitureInteractive : MonoBehaviour
     {
         if(ani != null) ani.SetBool("Activate", true);
         yield return new WaitForSeconds(1);
-        childObject.SetActive(true);
-        childObject.transform.SetParent(null);
+        if (childObject != null)
+        {
+            childObject.SetActive(true);
+            childObject.transform.SetParent(null);
+        }
         Destroy(gameObject);
         
         yield return null;
