@@ -14,6 +14,8 @@ public class FurnitureInteractive : MonoBehaviour
     public AudioSource myAudioSource;
     public bool destroy_once_activated;
 
+    private Animator ani;
+
     bool alreadyPlayed = false;
     //public string Activatedby;
     void Start()
@@ -24,6 +26,8 @@ public class FurnitureInteractive : MonoBehaviour
         GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         myAudioSource = GetComponent<AudioSource>();
+
+        ani = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -61,6 +65,7 @@ public class FurnitureInteractive : MonoBehaviour
 
     private IEnumerator destroy()
     {
+        if(ani != null) ani.SetBool("Activate", true);
         yield return new WaitForSeconds(1);
         childObject.SetActive(true);
         childObject.transform.SetParent(null);

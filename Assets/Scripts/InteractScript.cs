@@ -9,6 +9,7 @@ public class InteractScript : MonoBehaviour
     public Sprite after;
     public bool interacted;
     public bool destory_once_interacted;
+    public Animator ani;
 
     public string Activatedby;
     void Start()
@@ -16,7 +17,12 @@ public class InteractScript : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
-        if(this.gameObject.transform.GetChild(0)!= null)this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        if (transform.childCount != 0)
+        {
+            Debug.Log(transform.childCount);
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
+        
     }
 
     private void Update()
@@ -26,6 +32,7 @@ public class InteractScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
             if (destory_once_interacted)
             {
+                //if(ani != null)
                 StartCoroutine(activate_once());
             }
         }
@@ -34,9 +41,9 @@ public class InteractScript : MonoBehaviour
 
     private IEnumerator activate_once()
     {
+        
         yield return new WaitForSeconds(1);
-        GameObject child = this.gameObject.transform.GetChild(0).gameObject;
-        //child.transform.SetParent(null);
+        GameObject child = transform.GetChild(0).gameObject;
         child.SetActive(true);
         child.transform.SetParent(null);
         Destroy(gameObject);
