@@ -43,7 +43,7 @@ public class ClickMouse : MonoBehaviour
 
         if (interact_furniture)
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && item == null)
             {
                 if (!Finteractive.open)
                 {
@@ -76,7 +76,6 @@ public class ClickMouse : MonoBehaviour
     {
         if (collision != null)
         {
-            //Debug.Log("m");
             if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
             {
                 if (collision.tag == "Collectable")

@@ -12,7 +12,7 @@ public class FurnitureInteractive : MonoBehaviour
     public GameObject childObject;
 
     public AudioSource myAudioSource;
-
+    public bool destroy_once_activated;
 
     bool alreadyPlayed = false;
     //public string Activatedby;
@@ -31,22 +31,41 @@ public class FurnitureInteractive : MonoBehaviour
         if (open)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
-            if (childObject != null) childObject.SetActive(true);
+
             if (!alreadyPlayed)
             {
 
                 myAudioSource.Play();
                 alreadyPlayed = true;
             }
+
+            if (destroy_once_activated)
+            {
+                StartCoroutine(destroy());
+            }
+            else
+            {
+                if (childObject != null) childObject.SetActive(true);
+            }
         }
 
         else
-        {
+        { 
             gameObject.GetComponent<SpriteRenderer>().sprite = before;
             if (childObject != null) childObject.SetActive(false);
             myAudioSource.Stop();
             alreadyPlayed = false;
 
         }
+    }
+
+    private IEnumerator destroy()
+    {
+        yield return new WaitForSeconds(1);
+        childObject.SetActive(true);
+        childObject.transform.SetParent(null);
+        Destroy(gameObject);
+        
+        yield return null;
     }
 }
