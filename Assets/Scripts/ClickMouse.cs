@@ -59,7 +59,6 @@ public class ClickMouse : MonoBehaviour
     {
         if (collision.tag == "FurnitureInteract")
         {
-            Debug.Log("!");
             interact_furniture = true;
             Finteractive = collision.gameObject.GetComponent<FurnitureInteractive>();
         }
@@ -76,7 +75,7 @@ public class ClickMouse : MonoBehaviour
         if(collision != null)
         {
             //Debug.Log("m");
-            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetMouseButtonDown(0))
+            if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
             {
                 if (collision.tag == "Collectable")
                 {

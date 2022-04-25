@@ -26,8 +26,8 @@ public class Inventory2_0 : MonoBehaviour
         {
             if(UsedSlots[i].transform.childCount == 0)
             {
-                InventorySlots.Add(UsedSlots[0]);
-                UsedSlots.Remove(UsedSlots[0]);
+                InventorySlots.Add(UsedSlots[i]);
+                UsedSlots.Remove(UsedSlots[i]);
             }
         }
         //if there's an item move slot to used slots
@@ -35,8 +35,8 @@ public class Inventory2_0 : MonoBehaviour
         {
             if (InventorySlots[i].transform.childCount != 0)
             {
-                UsedSlots.Add(InventorySlots[0]);
-                InventorySlots.Remove(InventorySlots[0]);
+                UsedSlots.Add(InventorySlots[i]);
+                InventorySlots.Remove(InventorySlots[i]);
             }
         }
 
