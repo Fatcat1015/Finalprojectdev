@@ -12,7 +12,6 @@ public class ClickMouse : MonoBehaviour
     GameObject inventory;
     public GameObject item;
 
-
     public GameObject item_holding;
     public AudioSource myAudioSource;
 

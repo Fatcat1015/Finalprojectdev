@@ -23,7 +23,7 @@ public class Invent_item_name : MonoBehaviour
         }
         else
         {
-            item_text = "Click item to show name";
+            item_text = "";
         }
 
         TMPtext.text = item_text;

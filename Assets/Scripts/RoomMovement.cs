@@ -7,6 +7,7 @@ public class RoomMovement : MonoBehaviour
     public Room currentRoom;
     public int horizontal_shift = 1;
 
+    public bool isZoomedin = false;
     public Vector3 beforezoom;
 
     private GameObject leftA;
@@ -48,6 +49,8 @@ public class RoomMovement : MonoBehaviour
         backA.SetActive(true);
         leftA.SetActive(false);
         rightA.SetActive(false);
+
+        isZoomedin = true;
     }
 
     public void zoomout()
@@ -58,6 +61,8 @@ public class RoomMovement : MonoBehaviour
             backA.SetActive(false);
             leftA.SetActive(true);
             rightA.SetActive(true);
+
+            isZoomedin = false;
 
         }
     }
