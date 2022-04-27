@@ -43,15 +43,6 @@ public class Inventory2_0 : MonoBehaviour
 
     }
 
-    private void OnMouseDrag()
-    {
-        //hold item - in item script
-    }
-
-    private void OnMouseUp()
-    {
-      //reset  
-    }
 
     public void AddItem(string item_name)
     {
@@ -64,12 +55,5 @@ public class Inventory2_0 : MonoBehaviour
         }
         UsedSlots.Add(InventorySlots[0]);
         InventorySlots.Remove(InventorySlots[0]);
-    }
-
-    public void HoldItem(string item_name)
-    {
-        GameObject item = GameObject.Find(item_name);
-        item.transform.SetParent(this.transform);
-        transform.position = Input.mousePosition;
     }
 }
