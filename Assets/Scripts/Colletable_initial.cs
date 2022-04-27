@@ -10,5 +10,6 @@ public class Colletable_initial : MonoBehaviour
     void Start()
     {
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
+        GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
     }
 }
