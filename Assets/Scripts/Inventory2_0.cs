@@ -10,6 +10,7 @@ public class Inventory2_0 : MonoBehaviour
     public List<GameObject> UsedSlots = new List<GameObject>();
     public GameObject item_default;
     public GameObject InventoryUI;
+    //ublic SpriteAtlas furniture1;
     void Start()
     {
         InventoryUI = GameObject.FindGameObjectWithTag("InventoryUI");
@@ -26,8 +27,8 @@ public class Inventory2_0 : MonoBehaviour
         {
             if(UsedSlots[i].transform.childCount == 0)
             {
-                InventorySlots.Add(UsedSlots[0]);
-                UsedSlots.Remove(UsedSlots[0]);
+                InventorySlots.Add(UsedSlots[i]);
+                UsedSlots.Remove(UsedSlots[i]);
             }
         }
         //if there's an item move slot to used slots
@@ -35,19 +36,24 @@ public class Inventory2_0 : MonoBehaviour
         {
             if (InventorySlots[i].transform.childCount != 0)
             {
-                UsedSlots.Add(InventorySlots[0]);
-                InventorySlots.Remove(InventorySlots[0]);
+                UsedSlots.Add(InventorySlots[i]);
+                InventorySlots.Remove(InventorySlots[i]);
             }
         }
 
     }
+
 
     public void AddItem(string item_name)
     {
         GameObject newitem = Instantiate(item_default, new Vector3(0,0,0), Quaternion.identity);
         newitem.transform.SetParent(InventorySlots[0].transform,false);
         newitem.name = item_name;
-        newitem.GetComponent<Image>().sprite = Resources.Load<Sprite>(item_name);
+        if (Resources.Load<Sprite>(item_name) != null)
+        {
+            newitem.GetComponent<Image>().sprite = Resources.Load<Sprite>(item_name);
+        }
+        //newitem.GetComponent<ItemUse>().slot_index = InventorySlots[0].name;
         UsedSlots.Add(InventorySlots[0]);
         InventorySlots.Remove(InventorySlots[0]);
     }

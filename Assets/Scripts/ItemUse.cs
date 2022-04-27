@@ -2,47 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class ItemUse : MonoBehaviour
 {
     public bool clicked_on;
     public bool Incorrect = true;
-    public Vector2 initial_pos;
+
+    public AudioSource myAudioSource;
+
+    //public string slot_index;
 
     private void Start()
     {
-        initial_pos = GetComponentInParent<Transform>().position;
+        myAudioSource = GetComponent<AudioSource>();
     }
-    private void Update()
+    private void FixedUpdate()
     {
         if (clicked_on)
         {
             transform.position = Input.mousePosition;
         }
     }
+
     public void useObject()
     {
         if (clicked_on)
         {
+            //selected sound
+            myAudioSource.Play();
             clicked_on = false;
-            transform.position = initial_pos;
-            FindObjectOfType<InventoryScroll>().Scroll = true;
             FindObjectOfType<ClickMouse>().item = null;
+            GameObject slot = GameObject.Find(FindObjectOfType<ClickMouse>().hovering_over_slot);
+            transform.position = slot.transform.position;
+            this.transform.SetParent(slot.transform);
         }
-        else if (!clicked_on&&Incorrect)
+        else
         {
             FindObjectOfType<ClickMouse>().item = gameObject;
-            FindObjectOfType<InventoryScroll>().Scroll = false;
-            initial_pos = GetComponentInParent<Transform>().position;
             clicked_on = true;
-        }
-    }
-
-    public void holdObject()
-    {
-        if (!clicked_on)
-        {
-            
         }
     }
 }
