@@ -10,6 +10,7 @@ public class Inventory2_0 : MonoBehaviour
     public List<GameObject> UsedSlots = new List<GameObject>();
     public GameObject item_default;
     public GameObject InventoryUI;
+    //ublic SpriteAtlas furniture1;
     void Start()
     {
         InventoryUI = GameObject.FindGameObjectWithTag("InventoryUI");
@@ -47,7 +48,16 @@ public class Inventory2_0 : MonoBehaviour
         GameObject newitem = Instantiate(item_default, new Vector3(0,0,0), Quaternion.identity);
         newitem.transform.SetParent(InventorySlots[0].transform,false);
         newitem.name = item_name;
-        newitem.GetComponent<Image>().sprite = Resources.Load<Sprite>(item_name);
+        if (Resources.Load<Sprite>(item_name) == null)
+        {
+           /* SpriteAtlas furniture1;
+            var sprites = new Sprite[furniture1.spriteCount];
+            newitem.GetComponent<Image>().sprite = furniture1.GetSprite(item_name)*/
+        }
+        else
+        {
+            newitem.GetComponent<Image>().sprite = Resources.Load<Sprite>(item_name);
+        }
         UsedSlots.Add(InventorySlots[0]);
         InventorySlots.Remove(InventorySlots[0]);
     }

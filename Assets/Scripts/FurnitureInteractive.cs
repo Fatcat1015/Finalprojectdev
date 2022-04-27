@@ -14,6 +14,9 @@ public class FurnitureInteractive : MonoBehaviour
     public AudioSource myAudioSource;
     public bool destroy_once_activated;
 
+    private Animator ani;
+    [SerializeField] private int interval = 2;
+
     bool alreadyPlayed = false;
     //public string Activatedby;
     void Start()
@@ -24,6 +27,8 @@ public class FurnitureInteractive : MonoBehaviour
         GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         myAudioSource = GetComponent<AudioSource>();
+
+        ani = GetComponent<Animator>();
     }
 
     private void FixedUpdate()
@@ -34,8 +39,10 @@ public class FurnitureInteractive : MonoBehaviour
 
             if (!alreadyPlayed)
             {
-
-                myAudioSource.Play();
+                if(myAudioSource!= null)
+                {
+                    myAudioSource.Play();
+                }
                 alreadyPlayed = true;
             }
 
@@ -53,7 +60,7 @@ public class FurnitureInteractive : MonoBehaviour
         { 
             gameObject.GetComponent<SpriteRenderer>().sprite = before;
             if (childObject != null) childObject.SetActive(false);
-            myAudioSource.Stop();
+            if (myAudioSource != null)myAudioSource.Stop();
             alreadyPlayed = false;
 
         }
@@ -61,9 +68,13 @@ public class FurnitureInteractive : MonoBehaviour
 
     private IEnumerator destroy()
     {
-        yield return new WaitForSeconds(1);
-        childObject.SetActive(true);
-        childObject.transform.SetParent(null);
+        if(ani != null) ani.SetBool("Activate", true);
+        yield return new WaitForSeconds(interval);
+        if (childObject != null)
+        {
+            childObject.SetActive(true);
+            childObject.transform.SetParent(null);
+        }
         Destroy(gameObject);
         
         yield return null;

@@ -7,14 +7,19 @@ public class RoomMovement : MonoBehaviour
     public Room currentRoom;
     public int horizontal_shift = 1;
 
+    public Vector3 beforezoom;
+
+    private GameObject leftA;
+    private GameObject rightA;
+    private GameObject backA;
+
     public void Awake()
     {
         Camera.main.transform.position = currentRoom.background.position + new Vector3 (horizontal_shift, 0, -1);
-    }
-
-    private void Update()
-    {
-
+        leftA = GameObject.Find("Left Arrow");
+        rightA = GameObject.Find("RightArrow");
+        backA = GameObject.Find("BackArrow");
+        backA.SetActive(false);
 
     }
 
@@ -34,6 +39,27 @@ public class RoomMovement : MonoBehaviour
 
         Camera.main.transform.position = currentRoom.background.position + new Vector3(horizontal_shift, 0, -1);
     
+    }
+
+    public void zoomin(Transform pos)
+    {
+        beforezoom = Camera.main.transform.position;
+        Camera.main.transform.position = new Vector3(pos.position.x+horizontal_shift, pos.position.y, -10);
+        backA.SetActive(true);
+        leftA.SetActive(false);
+        rightA.SetActive(false);
+    }
+
+    public void zoomout()
+    {
+        if (beforezoom != null)
+        {
+            Camera.main.transform.position = beforezoom;
+            backA.SetActive(false);
+            leftA.SetActive(true);
+            rightA.SetActive(true);
+
+        }
     }
 
 }

@@ -9,6 +9,9 @@ public class InteractScript : MonoBehaviour
     public Sprite after;
     public bool interacted;
     public bool destory_once_interacted;
+    public Animator ani;
+
+    [SerializeField] private int interval = 1;
 
     public string Activatedby;
     void Start()
@@ -16,7 +19,12 @@ public class InteractScript : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
-        if(this.gameObject.transform.GetChild(0)!= null)this.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        if (transform.childCount != 0)
+        {
+            //Debug.Log(transform.childCount);
+            transform.GetChild(0).gameObject.SetActive(false);
+        }
+        
     }
 
     private void Update()
@@ -26,20 +34,25 @@ public class InteractScript : MonoBehaviour
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
             if (destory_once_interacted)
             {
-                StartCoroutine(activate_once());
+                
+                StartCoroutine(activate_once(interval));
             }
         }
         
     }
 
-    private IEnumerator activate_once()
+    private IEnumerator activate_once(int seconds)
     {
-        yield return new WaitForSeconds(1);
-        GameObject child = this.gameObject.transform.GetChild(0).gameObject;
-        //child.transform.SetParent(null);
-        child.SetActive(true);
-        child.transform.SetParent(null);
-        Destroy(gameObject);
+        
+        yield return new WaitForSeconds(seconds);
+        if (transform.childCount != 0)
+        {
+            GameObject child = transform.GetChild(0).gameObject;
+            child.SetActive(true);
+            child.transform.SetParent(null);
+            Destroy(gameObject);
+        }
+       
         yield return null;
     }
 }

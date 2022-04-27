@@ -313,8 +313,8 @@ ScriptedImporter:
     uvTransform: {x: 805, y: 291}
   - name: Playing Needle
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.933849, y: 0.8504939}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -335,8 +335,8 @@ ScriptedImporter:
     uvTransform: {x: 1140, y: 903}
   - name: Not Playing Needle
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.768801, y: 0.6035336}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -357,8 +357,8 @@ ScriptedImporter:
     uvTransform: {x: 2711, y: 453}
   - name: No Needle
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.96243787, y: 0.13971417}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
