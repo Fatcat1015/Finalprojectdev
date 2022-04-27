@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(AudioSource))]
 public class InteractScript : MonoBehaviour
 {
     public Sprite before;
@@ -10,6 +11,11 @@ public class InteractScript : MonoBehaviour
     public bool interacted;
     public bool destory_once_interacted;
     public Animator ani;
+
+    public AudioSource myAudioSource;
+    public AudioClip useItemSound;
+
+    bool alreadyPlayed = false;
 
     [SerializeField] private int interval = 1;
 
@@ -23,8 +29,10 @@ public class InteractScript : MonoBehaviour
         {
             //Debug.Log(transform.childCount);
             transform.GetChild(0).gameObject.SetActive(false);
+
+            myAudioSource = GetComponent<AudioSource>();
         }
-        
+
     }
 
     private void Update()
@@ -32,18 +40,29 @@ public class InteractScript : MonoBehaviour
         if (interacted)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
+            //using items
+            if (!alreadyPlayed)
+            {
+                if (myAudioSource != null)
+                {
+                    myAudioSource.PlayOneShot(useItemSound);
+                    alreadyPlayed = true;
+                }
+            }
+
+
             if (destory_once_interacted)
             {
-                
+
                 StartCoroutine(activate_once(interval));
             }
         }
-        
+
     }
 
     private IEnumerator activate_once(int seconds)
     {
-        
+
         yield return new WaitForSeconds(seconds);
         if (transform.childCount != 0)
         {
@@ -52,7 +71,7 @@ public class InteractScript : MonoBehaviour
             child.transform.SetParent(null);
             Destroy(gameObject);
         }
-       
+
         yield return null;
     }
 }
