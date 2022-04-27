@@ -1294,7 +1294,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 80
     mosaicPosition: {x: 0, y: 0}
   - name: catPaw
@@ -1322,7 +1322,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 75
     mosaicPosition: {x: 0, y: 0}
   - name: safe close
@@ -1357,7 +1357,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 69
     mosaicPosition: {x: 0, y: 0}
   - name: doorHandle
@@ -1413,7 +1413,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 60
     mosaicPosition: {x: 0, y: 0}
   - name: curtainOpen
@@ -1455,7 +1455,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 53
     mosaicPosition: {x: 0, y: 0}
   - name: puzzle3
@@ -1511,7 +1511,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 44
     mosaicPosition: {x: 0, y: 0}
   - name: puzzle2
@@ -1560,7 +1560,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 36
     mosaicPosition: {x: 0, y: 0}
   - name: puzzle1
@@ -1623,7 +1623,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 26
     mosaicPosition: {x: 0, y: 0}
   - name: drawer
@@ -1637,7 +1637,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 23
     mosaicPosition: {x: 0, y: 0}
   - name: drawerTop
@@ -1651,7 +1651,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 49
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 21
     mosaicPosition: {x: 0, y: 0}
   - name: dawerLayer1
@@ -1693,14 +1693,14 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: -1
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 13
     mosaicPosition: {x: 0, y: 0}
   - name: poster Game Pieces
     spriteName: 
     isGroup: 1
     parentIndex: 57
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 12
     mosaicPosition: {x: 0, y: 0}
   - name: posterSquare3
@@ -1728,7 +1728,7 @@ ScriptedImporter:
     spriteName: 
     isGroup: 1
     parentIndex: 57
-    spriteID: 
+    spriteID: 00000000000000000000000000000000
     layerID: 7
     mosaicPosition: {x: 0, y: 0}
   - name: poster3
