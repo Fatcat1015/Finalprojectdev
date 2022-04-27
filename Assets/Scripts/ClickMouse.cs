@@ -14,6 +14,7 @@ public class ClickMouse : MonoBehaviour
 
     public GameObject item_holding;
     public AudioSource myAudioSource;
+    //public AudioClip collectItemSound;
 
     Camera mainCamera;
 
@@ -43,11 +44,11 @@ public class ClickMouse : MonoBehaviour
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//make object follow mouse
 
-        if (interact_furniture&&!interact_others)
+        if (interact_furniture && !interact_others)
         {
             if (Input.GetMouseButtonDown(0) && item == null)
             {
-                if (!Finteractive.open&&waitover)
+                if (!Finteractive.open && waitover)
                 {
                     Finteractive.open = true;
                     StartCoroutine(waittime());
@@ -72,7 +73,7 @@ public class ClickMouse : MonoBehaviour
             Finteractive = collision.gameObject.GetComponent<FurnitureInteractive>();
         }
 
-        if (collision.tag == "Collectable"||collision.tag == "Interact")
+        if (collision.tag == "Collectable" || collision.tag == "Interact")
         {
             //interact_others = true;
         }
@@ -90,7 +91,7 @@ public class ClickMouse : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)//when collided with collectable
     {
-        if (collision != null&& waitover)
+        if (collision != null && waitover)
         {
             if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
             {
@@ -114,8 +115,9 @@ public class ClickMouse : MonoBehaviour
                             StartCoroutine(waittime());
                         }
                     }
-                }else if (collision.tag == "Zoom")
-                { 
+                }
+                else if (collision.tag == "Zoom")
+                {
                     RoomMovement rm = FindObjectOfType<RoomMovement>();
                     rm.zoomin(collision.gameObject.transform.GetChild(0).transform);
                 }

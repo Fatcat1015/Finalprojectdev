@@ -43,18 +43,13 @@ public class Inventory2_0 : MonoBehaviour
 
     }
 
+
     public void AddItem(string item_name)
     {
         GameObject newitem = Instantiate(item_default, new Vector3(0,0,0), Quaternion.identity);
         newitem.transform.SetParent(InventorySlots[0].transform,false);
         newitem.name = item_name;
-        if (Resources.Load<Sprite>(item_name) == null)
-        {
-           /* SpriteAtlas furniture1;
-            var sprites = new Sprite[furniture1.spriteCount];
-            newitem.GetComponent<Image>().sprite = furniture1.GetSprite(item_name)*/
-        }
-        else
+        if (Resources.Load<Sprite>(item_name) != null)
         {
             newitem.GetComponent<Image>().sprite = Resources.Load<Sprite>(item_name);
         }
