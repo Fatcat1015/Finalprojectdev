@@ -57,7 +57,7 @@ public class eyeball_game : MonoBehaviour
                 eyeball[i].SetActive(false);
             }
                 GetComponent<SpriteRenderer>().sprite = finished_cake;
-            cake_slice.SetActive(true);
+            if(cake_slice!=null)cake_slice.SetActive(true);
         }
     }
 
