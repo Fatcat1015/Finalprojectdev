@@ -1,7 +1,58 @@
 fileFormatVersion: 2
 guid: 4fae6e7abd5ca4614bd17937f2222294
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 118302622836690971
+    second: cake and stamp puzzle_0
+  - first:
+      213: 1372784260801650209
+    second: cake and stamp puzzle_1
+  - first:
+      213: -6864968510508302532
+    second: cake and stamp puzzle_2
+  - first:
+      213: 5614574495885988946
+    second: cake and stamp puzzle_3
+  - first:
+      213: -2872027483764679209
+    second: cake and stamp puzzle_4
+  - first:
+      213: -4614794866944826266
+    second: cake and stamp puzzle_5
+  - first:
+      213: -4246395832774878366
+    second: cake and stamp puzzle_6
+  - first:
+      213: 8065717949046856097
+    second: cake and stamp puzzle_7
+  - first:
+      213: 1039356305837299253
+    second: cake and stamp puzzle_8
+  - first:
+      213: -8142978425907558121
+    second: cake and stamp puzzle_9
+  - first:
+      213: 1415812530972428866
+    second: cake and stamp puzzle_10
+  - first:
+      213: -8817991547366504316
+    second: cake and stamp puzzle_11
+  - first:
+      213: 3861061894050706715
+    second: cake and stamp puzzle_12
+  - first:
+      213: 3032366873113554817
+    second: cake and stamp puzzle_13
+  - first:
+      213: 3882738826771135492
+    second: cake and stamp puzzle_14
+  - first:
+      213: 7552558892732580430
+    second: cake and stamp puzzle_15
+  - first:
+      213: -4503589179631333685
+    second: cake and stamp puzzle_16
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +92,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +126,378 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cake and stamp puzzle_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 175
+        width: 698
+        height: 852
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b109d22db9b44a100800000000000000
+      internalID: 118302622836690971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_1
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 835
+        width: 172
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12e545a030c1d0310800000000000000
+      internalID: 1372784260801650209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_2
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 835
+        width: 172
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ff8e8038bbab0a0800000000000000
+      internalID: -6864968510508302532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_3
+      rect:
+        serializedVersion: 2
+        x: 1163
+        y: 835
+        width: 172
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2549048b1c9faed40800000000000000
+      internalID: 5614574495885988946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_4
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 835
+        width: 172
+        height: 201
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd1c0d58328428d0800000000000000
+      internalID: -2872027483764679209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_5
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 902
+        width: 39
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 664257cc484f4ffb0800000000000000
+      internalID: -4614794866944826266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_6
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 902
+        width: 38
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b11cb0d75c115c0800000000000000
+      internalID: -4246395832774878366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_7
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 587
+        width: 208
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a91e6b9dbf2fef60800000000000000
+      internalID: 8065717949046856097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_8
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 587
+        width: 208
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5369e7cad098c6e00800000000000000
+      internalID: 1039356305837299253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_9
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 587
+        width: 208
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7194c16d3445efe80800000000000000
+      internalID: -8142978425907558121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_10
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 597
+        width: 82
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24a8821eef9f5a310800000000000000
+      internalID: 1415812530972428866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_11
+      rect:
+        serializedVersion: 2
+        x: 1615
+        y: 597
+        width: 96
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48882da486330a580800000000000000
+      internalID: -8817991547366504316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_12
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 597
+        width: 124
+        height: 198
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1570baf55f359530800000000000000
+      internalID: 3861061894050706715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_13
+      rect:
+        serializedVersion: 2
+        x: 1010
+        y: 355
+        width: 208
+        height: 169
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18f689cda91251a20800000000000000
+      internalID: 3032366873113554817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_14
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 45
+        width: 417
+        height: 452
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40c7f4d246242e530800000000000000
+      internalID: 3882738826771135492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_15
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 187
+        width: 207
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e420b8a3c4410d860800000000000000
+      internalID: 7552558892732580430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cake and stamp puzzle_16
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 187
+        width: 208
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce08cd80890081c0800000000000000
+      internalID: -4503589179631333685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

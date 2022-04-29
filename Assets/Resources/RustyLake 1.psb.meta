@@ -406,9 +406,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 791
+      x: 1023
       y: 3224
-      width: 470
+      width: 238
       height: 290
     spriteID: 3727736daa08d4e178c5c3daac948b20
     internalID: 0
@@ -428,9 +428,9 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 791
+      x: 1023
       y: 3522
-      width: 470
+      width: 238
       height: 290
     spriteID: 256c53a79ae4b4028b0a706b190445ea
     internalID: 0

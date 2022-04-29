@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Inventory2_0 : MonoBehaviour
 {
-    public List<GameObject> item = new List<GameObject>();
+    //public List<GameObject> item = new List<GameObject>();
     public List<GameObject> InventorySlots = new List<GameObject>();
     public List<GameObject> UsedSlots = new List<GameObject>();
     public GameObject item_default;
