@@ -9,7 +9,9 @@ public class FurnitureInteractive : MonoBehaviour
     public Sprite after;
     public bool open = false;
     public bool hasChild;
-    public GameObject childObject;
+    //public GameObject childObject;
+
+    public List<GameObject> children = new List<GameObject>();
 
     public AudioSource myAudioSource;
     public bool destroy_once_activated;
@@ -29,6 +31,11 @@ public class FurnitureInteractive : MonoBehaviour
         myAudioSource = GetComponent<AudioSource>();
 
         ani = GetComponent<Animator>();
+
+        foreach (Transform child in gameObject.transform)
+        {
+            children.Add(child.gameObject);
+        }
     }
 
     private void FixedUpdate()
@@ -52,17 +59,28 @@ public class FurnitureInteractive : MonoBehaviour
             }
             else
             {
-                if (childObject != null) childObject.SetActive(true);
+                if (children != null) {
+                    for(int i = 0; i < children.Count; i++){
+                        children[i].SetActive(true);
+                    }
+                    
+                }
             }
         }
 
         else
         { 
             gameObject.GetComponent<SpriteRenderer>().sprite = before;
-            if (childObject != null) childObject.SetActive(false);
-            if (myAudioSource != null)myAudioSource.Stop();
-            alreadyPlayed = false;
+            if (children != null)
+            {
+                for (int i = 0; i < children.Count; i++)
+                {
+                    children[i].SetActive(false);
+                }
 
+            }
+            if (myAudioSource != null) myAudioSource.Stop();
+            alreadyPlayed = false;
         }
     }
 
@@ -70,10 +88,14 @@ public class FurnitureInteractive : MonoBehaviour
     {
         if(ani != null) ani.SetBool("Activate", true);
         yield return new WaitForSeconds(interval);
-        if (childObject != null)
+        if (children != null)
         {
-            childObject.SetActive(true);
-            childObject.transform.SetParent(null);
+            for (int i = 0; i < children.Count; i++)
+            {
+                children[i].SetActive(true);
+                children[i].transform.SetParent(null);
+            }
+
         }
         Destroy(gameObject);
         

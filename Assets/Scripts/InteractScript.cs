@@ -25,6 +25,7 @@ public class InteractScript : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
+        ani = GetComponent<Animator>();
         if (transform.childCount != 0)
         {
             //Debug.Log(transform.childCount);
@@ -39,6 +40,7 @@ public class InteractScript : MonoBehaviour
     {
         if (interacted)
         {
+            if (ani != null) ani.SetBool("Activated", true);
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
             //using items
             if (!alreadyPlayed)
@@ -56,6 +58,10 @@ public class InteractScript : MonoBehaviour
 
                 StartCoroutine(activate_once(interval));
             }
+        }
+        else
+        {
+            gameObject.GetComponent<SpriteRenderer>().sprite = before;
         }
 
     }
