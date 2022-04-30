@@ -46,14 +46,14 @@ public class Inventory2_0 : MonoBehaviour
 
     public void AddItem(string item_name)
     {
-        GameObject newitem = Instantiate(item_default, new Vector3(0,0,0), Quaternion.identity);
+        GameObject newitem = Instantiate(item_default, new Vector3(0,0,0), Quaternion.identity) as GameObject;
         newitem.transform.SetParent(InventorySlots[0].transform,false);
         newitem.name = item_name;
         if (Resources.Load<Sprite>(item_name) != null)
         {
             newitem.GetComponent<Image>().sprite = Resources.Load<Sprite>(item_name);
         }
-        //newitem.GetComponent<ItemUse>().slot_index = InventorySlots[0].name;
+        newitem.GetComponent<ItemUse>().slot_index = InventorySlots[0].name;
         UsedSlots.Add(InventorySlots[0]);
         InventorySlots.Remove(InventorySlots[0]);
     }

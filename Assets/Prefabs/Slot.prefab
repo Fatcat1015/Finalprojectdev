@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6728827303372023619}
   - component: {fileID: 6728827303372023618}
   - component: {fileID: 1454070435022511911}
+  - component: {fileID: 3887850977220372287}
   m_Layer: 5
   m_Name: Slot
   m_TagString: Untagged
@@ -93,47 +94,43 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 7493027693210767302, guid: c04d939f364cda5409e631c01afc693c, type: 3}
-          m_TargetAssemblyTypeName: ClickMouse, Assembly-CSharp
-          m_MethodName: hover
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 6728827303372023620}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 4
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7493027693210767302, guid: c04d939f364cda5409e631c01afc693c, type: 3}
-          m_TargetAssemblyTypeName: ClickMouse, Assembly-CSharp
-          m_MethodName: hover
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 6728827303372023620}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 7493027693210767302, guid: c04d939f364cda5409e631c01afc693c, type: 3}
-          m_TargetAssemblyTypeName: ClickMouse, Assembly-CSharp
-          m_MethodName: hover
-          m_Mode: 2
+        - m_Target: {fileID: 3887850977220372287}
+          m_TargetAssemblyTypeName: slot, Assembly-CSharp
+          m_MethodName: Hover
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - eventID: 14
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3887850977220372287}
+          m_TargetAssemblyTypeName: slot, Assembly-CSharp
+          m_MethodName: Hover
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &3887850977220372287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6728827303372023620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb0b983a3ee62b47bfc8521f03b7b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

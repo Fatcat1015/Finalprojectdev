@@ -2147,6 +2147,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 107716234}
     m_Modifications:
+    - target: {fileID: 1454070435022511911, guid: d4bea24f12d7e4d6db4a778d91ae1c1a, type: 3}
+      propertyPath: m_Delegates.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454070435022511911, guid: d4bea24f12d7e4d6db4a778d91ae1c1a, type: 3}
+      propertyPath: m_Delegates.Array.data[1].eventID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454070435022511911, guid: d4bea24f12d7e4d6db4a778d91ae1c1a, type: 3}
+      propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6728827303372023620, guid: d4bea24f12d7e4d6db4a778d91ae1c1a, type: 3}
       propertyPath: m_Name
       value: Slot
@@ -8611,6 +8623,36 @@ MonoBehaviour:
   clicked_on: 0
   Incorrect: 1
   myAudioSource: {fileID: 0}
+  slot_index: Slot
+--- !u!114 &1396097776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1396097766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 5
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 3061189444127681075, guid: de89ac29c2924f6498723d4727f02a74, type: 3}
+          m_TargetAssemblyTypeName: ItemUse, Assembly-CSharp
+          m_MethodName: useObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1402252694
 GameObject:
   m_ObjectHideFlags: 0
@@ -13378,7 +13420,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Item
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8543069156554306117, guid: de89ac29c2924f6498723d4727f02a74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: de89ac29c2924f6498723d4727f02a74, type: 3}
 --- !u!1 &2032798661
 GameObject:
