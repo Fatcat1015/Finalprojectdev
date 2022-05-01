@@ -406,7 +406,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 523
+      x: 572
       y: 3184
       width: 38
       height: 39
@@ -420,7 +420,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -421, y: 2702}
+    uvTransform: {x: -372, y: 2702}
   - name: Button2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -450,7 +450,7 @@ ScriptedImporter:
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
-      x: 569
+      x: 523
       y: 3184
       width: 38
       height: 39
@@ -464,7 +464,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -119, y: 2703}
+    uvTransform: {x: -173, y: 2705}
   - name: Tap closed
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -846,7 +846,7 @@ ScriptedImporter:
     parentIndex: 17
     spriteID: c4b98704d07a3ea42b16fb650f5f15b2
     layerID: 10
-    mosaicPosition: {x: 523, y: 3184}
+    mosaicPosition: {x: 572, y: 3184}
   - name: Button2
     spriteName: Button2
     isGroup: 0
@@ -860,7 +860,7 @@ ScriptedImporter:
     parentIndex: 17
     spriteID: 6614652553b92484aacd797dec6313ca
     layerID: 8
-    mosaicPosition: {x: 569, y: 3184}
+    mosaicPosition: {x: 523, y: 3184}
   - name: Tap closed
     spriteName: Tap closed
     isGroup: 0

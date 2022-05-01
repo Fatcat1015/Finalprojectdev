@@ -77,7 +77,7 @@ public class TetrisGM : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //playing = false;
+            playing = false;
         }
     }
 
