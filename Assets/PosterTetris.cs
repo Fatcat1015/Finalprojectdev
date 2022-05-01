@@ -51,15 +51,15 @@ public class PosterTetris : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (!falling)
+        if (!falling&&!match_color_above)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, -Vector2.up);
-            Debug.DrawRay(transform.position, -Vector3.up, Color.green);
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
+            Debug.DrawRay(transform.position, Vector3.up, Color.green);
 
 
             if (hit.collider != null)
             {
-                if (hit.collider.gameObject.GetComponent<PosterTetris>() != null)
+                if (hit.collider.gameObject.GetComponent<PosterTetris>() != null&& hit.collider.gameObject.GetComponent<PosterTetris>() != this)
                 {
                     if (hit.collider.gameObject.GetComponent<PosterTetris>().color == this.color)
                     {
@@ -76,8 +76,9 @@ public class PosterTetris : MonoBehaviour
 
         if (match_color_above)
         {
-            /*
+            
             RaycastHit2D down = Physics2D.Raycast(transform.position, Vector2.down);
+            Debug.DrawRay(transform.position, Vector3.down, Color.blue);
 
             if (down.collider != null && down.collider.gameObject.GetComponent<PosterTetris>() != null)
             {
@@ -92,7 +93,7 @@ public class PosterTetris : MonoBehaviour
                         Destroy(gameObject);
                     }
                 }
-            }*/
+            }
         }
 
     }

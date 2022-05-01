@@ -12,12 +12,25 @@ public class TetrisGM : MonoBehaviour
     public List<GameObject> fallencubes = new List<GameObject>();
 
     public int clear_count = 0;
+    public GameObject prize;
 
-    //detect and make cubes disappear
-
-
+    private void Start()
+    {
+        prize.SetActive(false);
+    }
     private void Update()
     {
+        if(clear_count < 3)
+        {
+            GameObject.Find("poster3 (1)").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("poster" + (3-clear_count));
+        }
+
+        if(clear_count == 3)
+        {
+            playing = false;
+            prize.SetActive(true);
+        }
+
         if (playing)    //detect if in the game or not
         {
             //start dispensing cubes
@@ -41,6 +54,8 @@ public class TetrisGM : MonoBehaviour
                 Destroy(fallencubes[i]);
                 fallencubes.Remove(fallencubes[i]);
             }
+            if(clear_count<3) clear_count = 0;
+
             Destroy(cube);
             //reset status
         }
@@ -48,10 +63,14 @@ public class TetrisGM : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Player")
+        if (clear_count < 3)
         {
-            playing = true;
+            if (collision.tag == "Player")
+            {
+                playing = true;
+            }
         }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -61,5 +80,6 @@ public class TetrisGM : MonoBehaviour
             //playing = false;
         }
     }
+
 
 }
