@@ -6,6 +6,8 @@ public class ClickMouse : MonoBehaviour
 {
     //public InventoryManager inventoryManager;
     //InventoryManager inventoryManager;
+
+
     GameObject collected_obj;
     private BoxCollider2D cursor;
 
@@ -21,12 +23,16 @@ public class ClickMouse : MonoBehaviour
 
     bool interacting;
     public bool interact_furniture;
+    public bool interact_number;
     public bool interact_others;
     FurnitureInteractive Finteractive;
+
 
     public bool waitover = true;
 
     public string hovering_over_slot;
+
+
 
     private void Awake()
     {
@@ -41,6 +47,8 @@ public class ClickMouse : MonoBehaviour
         GetComponent<BoxCollider2D>().isTrigger = true;
         inventory = GameObject.FindGameObjectWithTag("InventManager");
         myAudioSource = GetComponent<AudioSource>();
+
+
 
     }
     private void Update()
@@ -66,6 +74,25 @@ public class ClickMouse : MonoBehaviour
                 }
             }
         }
+
+        if (item == null && interact_number)
+        {
+            if (waitover)
+            {
+
+                StartCoroutine(waittime());
+            }
+            else
+            {
+                if (waitover)
+                {
+
+                    StartCoroutine(waittime());
+                }
+            }
+        }
+
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -74,6 +101,11 @@ public class ClickMouse : MonoBehaviour
         {
             interact_furniture = true;
             Finteractive = collision.gameObject.GetComponent<FurnitureInteractive>();
+        }
+
+        if (collision.tag == "number")
+        {
+            collision.gameObject.GetComponent<ClickPlusOne>().ChangeSafeCode();
         }
 
         if (collision.tag == "Collectable" || collision.tag == "Interact")
@@ -90,7 +122,10 @@ public class ClickMouse : MonoBehaviour
         {
             interact_others = false;
         }
+
+        if (collision.tag == "number") interact_number = false;
     }
+
 
     public void OnTriggerStay2D(Collider2D collision)//when collided with collectable
     {
@@ -124,8 +159,16 @@ public class ClickMouse : MonoBehaviour
                     RoomMovement rm = FindObjectOfType<RoomMovement>();
                     rm.zoomin(collision.gameObject.transform.GetChild(0).transform);
                 }
+
+
             }
+
+
+
+
         }
+
+
 
     }
 
@@ -145,4 +188,5 @@ public class ClickMouse : MonoBehaviour
     {
         hovering_over_slot = item.name;
     }
+
 }

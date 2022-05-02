@@ -23,39 +23,56 @@ public class ClickPlusOne : MonoBehaviour
 
     }
 
-    GameObject GetTarget()
+    //GameObject GetTarget()
+    //{
+    //    Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+    //    RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, target);
+    //    if (hit)
+    //    {
+    //        return hit.collider.gameObject;
+    //    }
+    //    return null;
+    //}
+
+    //private void OnMouseOver()
+    ////only works when in the zone
+    //{
+    //    if (Input.GetMouseButtonDown(0)) //Left
+    //    {
+    //        GameObject hit = GetTarget();
+    //        //Debug.Log("hit");
+
+    //        if (hit != null)
+    //        {
+    //            if (number <= 9)
+    //            {
+    //                number++;
+
+
+    //            }
+    //            if (number > 9)
+    //            {
+    //                number = 0;
+
+    //            }
+    //            GetComponent<TextMesh>().text = number.ToString();
+    //        }
+    //    }
+    //}
+
+
+
+    public void ChangeSafeCode()
     {
-        Vector2 target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        RaycastHit2D hit = Physics2D.Raycast(Camera.main.transform.position, target);
-        if (hit)
+        Debug.Log("hit");
+        if (number <= 9)
         {
-            return hit.collider.gameObject;
+            number++;
         }
-        return null;
-    }
-
-    private void OnMouseOver()
-    //only works when in the zone
-    {
-        if (Input.GetMouseButtonDown(0)) //Left
+        else if (number > 9)
         {
-            GameObject hit = GetTarget();
-
-            if (hit != null)
-            {
-                if (number <= 9)
-                {
-                    number++;
-
-
-                }
-                if (number > 9)
-                {
-                    number = 0;
-
-                }
-                GetComponent<TextMesh>().text = number.ToString();
-            }
+            number = 0;
         }
+        GetComponent<TextMesh>().text = number.ToString();
     }
 }
