@@ -32,6 +32,7 @@ public class ClickMouse : MonoBehaviour
 
     public string hovering_over_slot;
 
+    private GameObject interacting_num;
 
 
     private void Awake()
@@ -75,20 +76,11 @@ public class ClickMouse : MonoBehaviour
             }
         }
 
-        if (item == null && interact_number)
+        if (interact_number)
         {
-            if (waitover)
+            if (Input.GetMouseButtonDown(0))
             {
-
-                StartCoroutine(waittime());
-            }
-            else
-            {
-                if (waitover)
-                {
-
-                    StartCoroutine(waittime());
-                }
+                interacting_num.GetComponent<ClickPlusOne>().ChangeSafeCode();
             }
         }
 
@@ -105,7 +97,9 @@ public class ClickMouse : MonoBehaviour
 
         if (collision.tag == "number")
         {
-            collision.gameObject.GetComponent<ClickPlusOne>().ChangeSafeCode();
+            //collision.gameObject.GetComponent<ClickPlusOne>().ChangeSafeCode();
+            interact_number = true;
+            interacting_num = collision.gameObject;
         }
 
         if (collision.tag == "Collectable" || collision.tag == "Interact")
@@ -123,8 +117,12 @@ public class ClickMouse : MonoBehaviour
             interact_others = false;
         }
 
-        if (collision.tag == "number") interact_number = false;
-    }
+        if (collision.tag == "number")
+        {
+            interact_number = false;
+            interacting_num = null;
+        }
+        }
 
 
     public void OnTriggerStay2D(Collider2D collision)//when collided with collectable

@@ -12,6 +12,7 @@ TagManager:
   - FurnitureInteract
   - Zoom
   - Tetris
+  - number
   layers:
   - Default
   - TransparentFX
