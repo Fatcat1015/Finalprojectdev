@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1bcd4650abf0a4e63a48e38cb5b23940
+guid: 51853aa37bd7e43aab711885707017e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5122517954208257568
-    second: cake slice_0
+      213: 6777020067426239318
+    second: stamp4_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -106,22 +106,22 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cake slice_0
+      name: stamp4_0
       rect:
         serializedVersion: 2
-        x: 1201
-        y: 633
-        width: 154
-        height: 297
+        x: 1323
+        y: 814
+        width: 250
+        height: 245
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 026d42860f6d61740800000000000000
-      internalID: 5122517954208257568
+      spriteID: 65382aa58dfcc0e50800000000000000
+      internalID: 6777020067426239318
       vertices: []
       indices: 
       edges: []
