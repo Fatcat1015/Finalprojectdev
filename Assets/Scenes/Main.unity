@@ -1076,6 +1076,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39d6a54e699bcf41b3638424248b51f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pauseScreenUI: {fileID: 70502717}
+  pauseScreenActive: 0
 --- !u!1 &78317517
 GameObject:
   m_ObjectHideFlags: 0
@@ -11769,7 +11771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 0}
-  dialogue_text: 
+  dialogueText: {fileID: 0}
 --- !u!1 &1195661790
 GameObject:
   m_ObjectHideFlags: 0
@@ -14994,7 +14996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueUI: {fileID: 1518208144}
-  dialogue_text: 
+  dialogueText: {fileID: 1317449974}
 --- !u!1 &1518657958
 GameObject:
   m_ObjectHideFlags: 0
