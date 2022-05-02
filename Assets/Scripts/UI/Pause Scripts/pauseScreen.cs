@@ -14,7 +14,12 @@ public class pauseScreen : MonoBehaviour
 
     public void Update()
     {
-        CheckPauseScreenActive();
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            gameObject.SetActive(!gameObject.activeSelf);
+
+        }
+        //CheckPauseScreenActive();
         /*if (Input.GetKeyDown(KeyCode.Space))
         {
             Debug.Log("ESC is being pressed");

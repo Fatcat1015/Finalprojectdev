@@ -6,13 +6,13 @@ using TMPro;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject dialogueUI;
-    public string dialogue_text;
-    private TMP_Text TMPtext;
+    //public string dialogue_text;
+    public TMP_Text dialogueText;
 
     private void Start()
     {
         dialogueUI.SetActive(false);
-        TMPtext = GetComponent<TMP_Text>();
+        dialogueText = GetComponent<TMP_Text>();
     }
 
     private void Update()
