@@ -10,9 +10,11 @@ public class flagpuzzleGM : MonoBehaviour
 
     public bool playing;
     public GameObject prize;
+    public GameObject destroy;
 
     private void Start()
     {
+        prize.SetActive(false);
         foreach (Transform child in gameObject.transform)
         {
             Flags.Add(child.gameObject);
@@ -26,6 +28,7 @@ public class flagpuzzleGM : MonoBehaviour
         for(int i = 0; i < Flags.Count; i++)
         {
             Flags[i].transform.position = FlagPos[shuffle_order[i]];
+            Flags[i].GetComponent<FlagPiece>().index = shuffle_order[i];
         }
     }
 
@@ -33,20 +36,18 @@ public class flagpuzzleGM : MonoBehaviour
     {
         if (winning())
         {
-            Debug.Log("!");
+            for (int i = 0; i < Flags.Count; i++)
+            {
+                Flags[i].GetComponent<FlagPiece>().finished = true;
+            }
+            if(destroy!= null) Destroy(destroy);
+            if(prize!= null) prize.SetActive(true);
         }
         
     }
 
-    public void PickupFlag(GameObject flag)
-    {
-        //pick up follow mouse
-        //insert into new position
-    }
-
     public void PutdownFlag(GameObject flag)
     {
-        Flags.IndexOf(flag);
         float closest_pos = 100;
         int pos = 0;
         for (int i = 0; i < Flags.Count; i++)
@@ -57,10 +58,19 @@ public class flagpuzzleGM : MonoBehaviour
                 pos = i;
             }
         }
-        //Vector3.Distance(other.position, transform.position);
         flag.transform.position = FlagPos[pos];
-        
-    }
+        for (int i = 0; i < Flags.Count; i++)//switch place with other flag;
+        {
+            if (Flags[i].GetComponent<FlagPiece>().index == pos)
+            {
+                Flags[i].transform.position = FlagPos[flag.GetComponent<FlagPiece>().index];
+                Flags[i].GetComponent<FlagPiece>().index = flag.GetComponent<FlagPiece>().index;
+            }
+        }
+
+        flag.GetComponent<FlagPiece>().index = pos;
+
+        }
 
     private bool winning()
     {

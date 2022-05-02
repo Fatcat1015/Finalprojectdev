@@ -26,13 +26,13 @@ public class FurnitureInteractive : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
-        GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        //GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         myAudioSource = GetComponent<AudioSource>();
 
         ani = GetComponent<Animator>();
 
-        foreach (Transform child in gameObject.transform)
+        foreach (Transform child in transform)
         {
             children.Add(child.gameObject);
         }
@@ -40,6 +40,10 @@ public class FurnitureInteractive : MonoBehaviour
 
     private void FixedUpdate()
     {
+        /*for (int i = 0; i < children.Count; i++)
+        {
+            if (children[i] == null) children.Remove(children[i]);
+        }*/
         if (open)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
@@ -59,26 +63,20 @@ public class FurnitureInteractive : MonoBehaviour
             }
             else
             {
-                if (children != null) {
                     for(int i = 0; i < children.Count; i++){
-                        children[i].SetActive(true);
+                        if (children[i] != null)children[i].SetActive(true);
                     }
-                    
-                }
             }
         }
 
         else
         { 
             gameObject.GetComponent<SpriteRenderer>().sprite = before;
-            if (children != null)
-            {
+            
                 for (int i = 0; i < children.Count; i++)
                 {
-                    children[i].SetActive(false);
+                    if (children[i] != null) children[i].SetActive(false);
                 }
-
-            }
             if (myAudioSource != null) myAudioSource.Stop();
             alreadyPlayed = false;
         }

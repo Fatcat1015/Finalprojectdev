@@ -65,11 +65,11 @@ public class ClickPlusOne : MonoBehaviour
     public void ChangeSafeCode()
     {
         Debug.Log("hit");
-        if (number <= 9)
+        if (number < 9)
         {
             number++;
         }
-        else if (number > 9)
+        else if (number >= 9)
         {
             number = 0;
         }

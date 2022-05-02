@@ -7,17 +7,14 @@ using UnityEngine;
 public class FlagPiece : MonoBehaviour
 {
     public bool moving;
+    public int index;
+
+    public bool finished;
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<BoxCollider2D>().isTrigger = true;
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -38,14 +35,18 @@ public class FlagPiece : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        if (moving)
+        if (!finished)
         {
-            transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            if (moving)
+            {
+                transform.position = new Vector3(Camera.main.ScreenToWorldPoint(Input.mousePosition).x, Camera.main.ScreenToWorldPoint(Input.mousePosition).y, 0);
+            }
         }
+        
     }
 
     private void OnMouseUp()
     {
-        FindObjectOfType<flagpuzzleGM>().PutdownFlag(gameObject);
+        transform.parent.GetComponent<flagpuzzleGM>().PutdownFlag(gameObject);
     }
 }
