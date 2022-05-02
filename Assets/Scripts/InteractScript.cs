@@ -28,9 +28,8 @@ public class InteractScript : MonoBehaviour
         ani = GetComponent<Animator>();
         if (transform.childCount != 0)
         {
-            //Debug.Log(transform.childCount);
             transform.GetChild(0).gameObject.SetActive(false);
-
+            if(transform.childCount == 2) transform.GetChild(1).gameObject.SetActive(false);
             myAudioSource = GetComponent<AudioSource>();
         }
 
