@@ -48,9 +48,9 @@ public class ItemUse : MonoBehaviour
             FindObjectOfType<ClickMouse>().item = null;
             StartCoroutine(returnobject());
         }
-        else
+        else 
         {
-            transform.SetParent(GameObject.Find("Item_name").transform);
+            if (FindObjectOfType<ClickMouse>().item = null)transform.SetParent(GameObject.Find("Item_name").transform);
             FindObjectOfType<ClickMouse>().item = gameObject;
             clicked_on = true;
         }
