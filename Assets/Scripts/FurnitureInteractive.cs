@@ -20,12 +20,17 @@ public class FurnitureInteractive : MonoBehaviour
     [SerializeField] private int interval = 2;
 
     bool alreadyPlayed = false;
+
+    public Transform opened;
+    public Transform closed;
     //public string Activatedby;
+
+    public bool drawer;
     void Start()
     {
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-        gameObject.GetComponent<SpriteRenderer>().sprite = before;
+        if(!drawer)gameObject.GetComponent<SpriteRenderer>().sprite = before;
         //GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         myAudioSource = GetComponent<AudioSource>();
@@ -46,39 +51,55 @@ public class FurnitureInteractive : MonoBehaviour
         }*/
         if (open)
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = after;
-
-            if (!alreadyPlayed)
+            if (drawer)
             {
-                if(myAudioSource!= null)
-                {
-                    myAudioSource.Play();
-                }
-                alreadyPlayed = true;
-            }
-
-            if (destroy_once_activated)
-            {
-                StartCoroutine(destroy());
+                gameObject.transform.position = closed.position;
             }
             else
             {
-                    for(int i = 0; i < children.Count; i++){
-                        if (children[i] != null)children[i].SetActive(true);
+                gameObject.GetComponent<SpriteRenderer>().sprite = after;
+
+                if (!alreadyPlayed)
+                {
+                    if (myAudioSource != null)
+                    {
+                        myAudioSource.Play();
                     }
+                    alreadyPlayed = true;
+                }
+
+                if (destroy_once_activated)
+                {
+                    StartCoroutine(destroy());
+                }
+                else
+                {
+                    for (int i = 0; i < children.Count; i++)
+                    {
+                        if (children[i] != null) children[i].SetActive(true);
+                    }
+                }
             }
+
         }
 
         else
-        { 
-            gameObject.GetComponent<SpriteRenderer>().sprite = before;
-            
+        {
+            if (drawer)
+            {
+                gameObject.transform.position = opened.position;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = before;
+
                 for (int i = 0; i < children.Count; i++)
                 {
                     if (children[i] != null) children[i].SetActive(false);
                 }
-            if (myAudioSource != null) myAudioSource.Stop();
-            alreadyPlayed = false;
+                if (myAudioSource != null) myAudioSource.Stop();
+                alreadyPlayed = false;
+            }
         }
     }
 

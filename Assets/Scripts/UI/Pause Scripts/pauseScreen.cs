@@ -9,7 +9,7 @@ public class pauseScreen : MonoBehaviour
 
     public void Start()
     {
-        //pauseScreenUI.SetActive(false);
+        pauseScreenUI.SetActive(false);
     }
 
     public void Update()
