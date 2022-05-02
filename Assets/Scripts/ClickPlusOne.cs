@@ -69,7 +69,7 @@ public class ClickPlusOne : MonoBehaviour
         {
             number++;
         }
-        else if (number > 9)
+        if (number > 9)
         {
             number = 0;
         }
