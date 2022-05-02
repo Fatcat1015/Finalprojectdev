@@ -41,6 +41,11 @@ public class InteractScript : MonoBehaviour
         {
             if (ani != null) ani.SetBool("Activated", true);
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
+            if (transform.childCount != 0)
+            {
+                transform.GetChild(0).gameObject.SetActive(true);
+                if (transform.childCount == 2) transform.GetChild(1).gameObject.SetActive(true);
+            }
             //using items
             if (!alreadyPlayed)
             {
