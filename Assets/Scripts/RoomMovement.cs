@@ -44,7 +44,7 @@ public class RoomMovement : MonoBehaviour
 
     public void zoomin(Transform pos)
     {
-        beforezoom = Camera.main.transform.position;
+        beforezoom = currentRoom.background.position + new Vector3(horizontal_shift, 0, -1);
         Camera.main.transform.position = new Vector3(pos.position.x+horizontal_shift, pos.position.y, -10);
         backA.SetActive(true);
         leftA.SetActive(false);
