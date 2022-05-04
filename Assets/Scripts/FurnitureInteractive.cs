@@ -31,7 +31,6 @@ public class FurnitureInteractive : MonoBehaviour
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         if(!drawer)gameObject.GetComponent<SpriteRenderer>().sprite = before;
-        //GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         myAudioSource = GetComponent<AudioSource>();
         myAudioSource.playOnAwake = false;
@@ -44,12 +43,13 @@ public class FurnitureInteractive : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        /*for (int i = 0; i < children.Count; i++)
+        for (int i = 0; i < children.Count; i++)
         {
             if (children[i] == null) children.Remove(children[i]);
-        }*/
+        }
+
         if (open)
         {
             if (drawer)
@@ -75,10 +75,14 @@ public class FurnitureInteractive : MonoBehaviour
                 }
                 else
                 {
-                    for (int i = 0; i < children.Count; i++)
+                    if (children != null)
                     {
-                        if (children[i] != null) children[i].SetActive(true);
-                    }
+                        for (int i = 0; i < children.Count; i++)
+                        {
+                            if (children[i] != null) children[i].SetActive(true);
+                            if (children[i].GetComponent<Colletable_initial>() != null) StartCoroutine(children[i].gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                        }
+                    }   
                 }
             }
 
@@ -93,10 +97,12 @@ public class FurnitureInteractive : MonoBehaviour
             else
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = before;
-
-                for (int i = 0; i < children.Count; i++)
+                if (children != null)
                 {
-                    if (children[i] != null) children[i].SetActive(false);
+                    for (int i = 0; i < children.Count; i++)
+                    {
+                        if (children[i] != null) children[i].SetActive(false);
+                    }
                 }
                 if (myAudioSource != null) myAudioSource.Stop();
                 alreadyPlayed = false;
@@ -112,8 +118,8 @@ public class FurnitureInteractive : MonoBehaviour
         {
             for (int i = 0; i < children.Count; i++)
             {
-                children[i].SetActive(true);
-                children[i].transform.SetParent(null);
+                if (children[i] != null) children[i].SetActive(true);
+                if (children[i] != null) children[i].transform.SetParent(null);
             }
 
         }

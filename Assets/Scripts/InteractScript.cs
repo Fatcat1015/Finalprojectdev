@@ -102,6 +102,7 @@ public class InteractScript : MonoBehaviour
                 {
                     GameObject child = transform.GetChild(0).gameObject;
                     child.SetActive(true);
+                    StartCoroutine(child.gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
                     child.transform.SetParent(null);
                     Destroy(gameObject);
                 }
@@ -110,6 +111,7 @@ public class InteractScript : MonoBehaviour
             {
                 GameObject child = transform.GetChild(0).gameObject;
                 child.SetActive(true);
+                StartCoroutine(child.gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
                 if (gameObject.transform.parent != null) child.transform.SetParent(gameObject.transform.parent);
                 else {
                     child.transform.SetParent(null);

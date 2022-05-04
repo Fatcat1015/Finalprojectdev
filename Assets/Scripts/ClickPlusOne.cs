@@ -20,7 +20,7 @@ public class ClickPlusOne : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        GetComponent<TextMesh>().text = number.ToString();
     }
 
     //GameObject GetTarget()
@@ -64,7 +64,7 @@ public class ClickPlusOne : MonoBehaviour
 
     public void ChangeSafeCode()
     {
-        Debug.Log("hit");
+        //Debug.Log("hit");
         if (number < 9)
         {
             number++;
@@ -73,6 +73,6 @@ public class ClickPlusOne : MonoBehaviour
         {
             number = 0;
         }
-        GetComponent<TextMesh>().text = number.ToString();
+        
     }
 }
