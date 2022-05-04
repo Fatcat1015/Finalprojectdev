@@ -11,6 +11,8 @@ public class ClickMouse : MonoBehaviour
     GameObject collected_obj;
     private BoxCollider2D cursor;
 
+    GameObject collided_obj;
+
     GameObject inventory;
     public GameObject item;
 
@@ -25,6 +27,7 @@ public class ClickMouse : MonoBehaviour
     public bool interact_furniture;
     public bool interact_number;
     public bool interact_others;
+    public bool interact_interact;
     FurnitureInteractive Finteractive;
 
 
@@ -84,7 +87,36 @@ public class ClickMouse : MonoBehaviour
             }
         }
 
+        if (interact_interact)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if(collided_obj!= null)
+                {
 
+
+                    if (collided_obj.GetComponent<InteractScript>().drawer)
+                    {
+
+                        if (collided_obj.GetComponent<InteractScript>().Activatedby == null)
+                        {
+                            collided_obj.gameObject.GetComponent<InteractScript>().interacted = !collided_obj.gameObject.GetComponent<InteractScript>().interacted;
+                        }
+                    }
+                    else
+                    if (item != null)
+                    {
+                        if (collided_obj.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
+                        {
+                            collided_obj.gameObject.GetComponent<InteractScript>().interacted = true;
+                            Destroy(item);
+                            StartCoroutine(waittime());
+                        }
+                    }
+                }
+                
+            }
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
@@ -102,9 +134,10 @@ public class ClickMouse : MonoBehaviour
             interacting_num = collision.gameObject;
         }
 
-        if (collision.tag == "Collectable" || collision.tag == "Interact")
+        if (collision.tag == "Interact")
         {
-            //interact_others = true;
+            interact_interact = true;
+            collided_obj = collision.gameObject;
         }
 
     }
@@ -122,14 +155,20 @@ public class ClickMouse : MonoBehaviour
             interact_number = false;
             interacting_num = null;
         }
+
+        if (collision.tag == "Interact")
+        {
+            interact_interact = false;
+            collided_obj = null;
         }
+    }
 
 
     public void OnTriggerStay2D(Collider2D collision)//when collided with collectable
     {
         if (collision != null && waitover)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetMouseButton(0))
+            if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
             {
                 if (collision.tag == "Collectable")
                 {
@@ -138,26 +177,6 @@ public class ClickMouse : MonoBehaviour
                     inventory.GetComponent<Inventory2_0>().AddItem(collected_obj.name);
                     Destroy(collected_obj);
                     StartCoroutine(waittime());
-                }
-
-                else if (collision.tag == "Interact")//place item in puzzles
-                {
-                    if (collision.GetComponent<InteractScript>().drawer)
-                    {
-                        if(collision.GetComponent<InteractScript>().Activatedby == null)
-                        {
-                            collision.gameObject.GetComponent<InteractScript>().interacted = !collision.gameObject.GetComponent<InteractScript>().interacted;
-                        }
-                    }else
-                    if (item != null)
-                    {
-                        if (collision.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
-                        {
-                            collision.gameObject.GetComponent<InteractScript>().interacted = true;
-                            Destroy(item);
-                            StartCoroutine(waittime());
-                        }
-                    }
                 }
                 else if (collision.tag == "Zoom")
                 {

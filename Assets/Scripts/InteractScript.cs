@@ -45,6 +45,8 @@ public class InteractScript : MonoBehaviour
             
         }
 
+        if(Activatedby == "")Activatedby = null;
+
     }
 
     private void Update()
