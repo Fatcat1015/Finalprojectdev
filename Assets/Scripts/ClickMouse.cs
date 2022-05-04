@@ -102,8 +102,21 @@ public class ClickMouse : MonoBehaviour
                         {
                             collided_obj.gameObject.GetComponent<InteractScript>().interacted = !collided_obj.gameObject.GetComponent<InteractScript>().interacted;
                         }
+                        else
+                        {
+                            if (item != null)
+                            {
+                                if (collided_obj.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
+                                {
+                                    collided_obj.gameObject.GetComponent<InteractScript>().interacted = true;
+                                    Destroy(item);
+                                    StartCoroutine(waittime());
+                                }
+                            }
+                        }
                     }
                     else
+
                     if (item != null)
                     {
                         if (collided_obj.gameObject.GetComponent<InteractScript>().Activatedby == item.name)

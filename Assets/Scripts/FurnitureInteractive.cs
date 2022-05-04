@@ -72,6 +72,7 @@ public class FurnitureInteractive : MonoBehaviour
                 if (destroy_once_activated)
                 {
                     StartCoroutine(destroy());
+                   
                 }
                 else
                 {
@@ -118,8 +119,12 @@ public class FurnitureInteractive : MonoBehaviour
         {
             for (int i = 0; i < children.Count; i++)
             {
-                if (children[i] != null) children[i].SetActive(true);
-                if (children[i] != null) children[i].transform.SetParent(null);
+                if (children[i] != null)
+                {
+                    children[i].SetActive(true);
+                    StartCoroutine(children[i].gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                    children[i].transform.SetParent(transform.parent);
+                }
             }
 
         }

@@ -15,15 +15,13 @@ public class Colletable_initial : MonoBehaviour
 
     private void Update()
     {
-        //if(Input.GetMouseButtonDown(0))StartCoroutine(delaybeforecollecting());
+        if(GetComponent<BoxCollider2D>().enabled == false)StartCoroutine(delaybeforecollecting());
     }
 
     public IEnumerator delaybeforecollecting()
     {
-        if(gameObject != null)
-        {
+        Debug.Log("!");
             yield return new WaitForSeconds(0.1f);
             GetComponent<BoxCollider2D>().enabled = true;
-        }
     }
 }

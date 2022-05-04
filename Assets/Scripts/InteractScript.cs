@@ -54,6 +54,8 @@ public class InteractScript : MonoBehaviour
         if (interacted)
         {
             if (ani != null) ani.SetBool("Activated", true);
+
+            //drawer function
             if (drawer)
             {
                 transform.position = opened_pos;
@@ -63,6 +65,9 @@ public class InteractScript : MonoBehaviour
             {
                 gameObject.GetComponent<SpriteRenderer>().sprite = after;
             }
+
+
+            //
             if (requireAnother)
             {
                 if (other_requirement.GetComponent<FurnitureInteractive>().open)
@@ -80,15 +85,17 @@ public class InteractScript : MonoBehaviour
                     }
                 }
             }
-            else if (transform.childCount != 0)
+            else
+
+            if (transform.childCount != 0)
             {
 
                 transform.GetChild(0).gameObject.SetActive(true);
-                StartCoroutine(transform.GetChild(0).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                //StartCoroutine(transform.GetChild(0).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
                 if (transform.childCount == 2)
                 {
                     transform.GetChild(1).gameObject.SetActive(true);
-                    StartCoroutine(transform.GetChild(1).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                    //StartCoroutine(transform.GetChild(1).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
                 }
             }
 
@@ -105,7 +112,6 @@ public class InteractScript : MonoBehaviour
 
             if (destory_once_interacted)
             {
-
                 StartCoroutine(activate_once(interval));
             }
         }
@@ -136,22 +142,26 @@ public class InteractScript : MonoBehaviour
                 {
                     GameObject child = transform.GetChild(0).gameObject;
                     child.SetActive(true);
-                    StartCoroutine(child.gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                    
                     child.transform.SetParent(null);
                     Destroy(gameObject);
                 }
             }
             else
             {
+                Debug.Log("!");
                 GameObject child = transform.GetChild(0).gameObject;
                 child.SetActive(true);
-                StartCoroutine(child.gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
                 if (gameObject.transform.parent != null) child.transform.SetParent(gameObject.transform.parent);
                 else {
                     child.transform.SetParent(null);
                 }
                 Destroy(gameObject);
             }
+        }
+        else
+        { 
+            Destroy(gameObject);
         }
 
         yield return null;
