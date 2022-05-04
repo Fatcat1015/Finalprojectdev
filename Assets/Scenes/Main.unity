@@ -1321,7 +1321,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.43413666}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1332,7 +1332,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.82, y: 1.98}
+  m_Size: {x: 0.82, y: 1.1117268}
   m_EdgeRadius: 0
 --- !u!1 &99729027
 GameObject:
@@ -8213,6 +8213,13 @@ MonoBehaviour:
   mom: {fileID: 356822510}
   dad: {fileID: 2067392188}
   grandpa: {fileID: 797529539}
+  mom_plate: {fileID: 0}
+  dad_plate: {fileID: 0}
+  grandpa_plate: {fileID: 0}
+  Mom_done: {fileID: 0}
+  Dad_done: {fileID: 0}
+  Grandpa_done: {fileID: 0}
+  OpenDoor: {fileID: 0}
 --- !u!1 &666911739
 GameObject:
   m_ObjectHideFlags: 0
@@ -17402,7 +17409,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.11941576}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -17413,7 +17420,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10, y: 7}
+  m_Size: {x: 10, y: 10.677981}
   m_EdgeRadius: 0
 --- !u!212 &1527520439
 SpriteRenderer:
@@ -22942,7 +22949,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
 --- !u!1 &2049815546
 GameObject:
