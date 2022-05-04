@@ -6,13 +6,22 @@ public class cat : MonoBehaviour
 {
 
     public Transform movecat;
-    //bool move;
+    bool move;
+    bool moved;
+
+    public GameObject vase;
+    public GameObject key;
+
+    public Sprite brokenvase;
 
     public GameObject fish;
+
+    private AudioSource audiosource;
     // Start is called before the first frame update
     void Start()
     {
-        
+       audiosource = GetComponent<AudioSource>();
+        key.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,9 +31,21 @@ public class cat : MonoBehaviour
         {
             if (fish.GetComponent<InteractScript>().interacted)
             {
-                transform.position = movecat.transform.position;
+                move = true;
             }
         }
         
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.tag == ("Player")&& move&&!moved)
+        {
+            transform.position = movecat.transform.position;
+            moved = true;
+            key.SetActive(true);
+            vase.GetComponent<SpriteRenderer>().sprite = brokenvase;
+            audiosource.PlayOneShot(audiosource.clip);
+        }
     }
 }

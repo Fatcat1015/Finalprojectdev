@@ -335,8 +335,8 @@ ScriptedImporter:
     uvTransform: {x: -374, y: 2417}
   - name: Broken Vase
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.42655817, y: 0.97132987}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
@@ -357,8 +357,8 @@ ScriptedImporter:
     uvTransform: {x: -518, y: 2164}
   - name: Vase
     originalName: 
-    pivot: {x: 0.5, y: 0.5}
-    alignment: 0
+    pivot: {x: 0.48711514, y: 0.49999797}
+    alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
