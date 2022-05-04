@@ -12,6 +12,11 @@ public class InteractScript : MonoBehaviour
     public bool destory_once_interacted;
     public Animator ani;
 
+    public bool drawer;
+    public Vector2 opened;
+    private Vector2 opened_pos;
+    private Vector2 closed_pos;
+
     public bool requireAnother;
     public GameObject other_requirement;
 
@@ -25,6 +30,8 @@ public class InteractScript : MonoBehaviour
     public string Activatedby;
     void Start()
     {
+        opened_pos = new Vector2(transform.position.x, transform.position.y + opened.y);
+        closed_pos = transform.position;
         gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Kinematic;
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
@@ -45,7 +52,15 @@ public class InteractScript : MonoBehaviour
         if (interacted)
         {
             if (ani != null) ani.SetBool("Activated", true);
-            gameObject.GetComponent<SpriteRenderer>().sprite = after;
+            if (drawer)
+            {
+                transform.position = opened_pos;
+                Activatedby = null;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = after;
+            }
             if (requireAnother)
             {
                 if (other_requirement.GetComponent<FurnitureInteractive>().open)
@@ -54,7 +69,12 @@ public class InteractScript : MonoBehaviour
                     {
 
                         transform.GetChild(0).gameObject.SetActive(true);
-                        if (transform.childCount == 2) transform.GetChild(1).gameObject.SetActive(true);
+                        StartCoroutine(transform.GetChild(0).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                        if (transform.childCount == 2)
+                        {
+                            transform.GetChild(1).gameObject.SetActive(true);
+                            StartCoroutine(transform.GetChild(1).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                        }
                     }
                 }
             }
@@ -62,7 +82,12 @@ public class InteractScript : MonoBehaviour
             {
 
                 transform.GetChild(0).gameObject.SetActive(true);
-                if (transform.childCount == 2) transform.GetChild(1).gameObject.SetActive(true);
+                StartCoroutine(transform.GetChild(0).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                if (transform.childCount == 2)
+                {
+                    transform.GetChild(1).gameObject.SetActive(true);
+                    StartCoroutine(transform.GetChild(1).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
+                }
             }
 
             //using items
@@ -84,7 +109,14 @@ public class InteractScript : MonoBehaviour
         }
         else
         {
-            gameObject.GetComponent<SpriteRenderer>().sprite = before;
+            if (drawer)
+            {
+                transform.position = closed_pos;
+            }
+            else
+            {
+                gameObject.GetComponent<SpriteRenderer>().sprite = before;
+            }
         }
 
     }

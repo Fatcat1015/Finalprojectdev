@@ -129,7 +129,7 @@ public class ClickMouse : MonoBehaviour
     {
         if (collision != null && waitover)
         {
-            if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
+            if (Input.GetKeyDown(KeyCode.Mouse0) || Input.GetMouseButton(0))
             {
                 if (collision.tag == "Collectable")
                 {
@@ -142,6 +142,13 @@ public class ClickMouse : MonoBehaviour
 
                 else if (collision.tag == "Interact")//place item in puzzles
                 {
+                    if (collision.GetComponent<InteractScript>().drawer)
+                    {
+                        if(collision.GetComponent<InteractScript>().Activatedby == null)
+                        {
+                            collision.gameObject.GetComponent<InteractScript>().interacted = !collision.gameObject.GetComponent<InteractScript>().interacted;
+                        }
+                    }else
                     if (item != null)
                     {
                         if (collision.gameObject.GetComponent<InteractScript>().Activatedby == item.name)

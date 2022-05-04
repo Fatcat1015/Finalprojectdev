@@ -97,10 +97,10 @@ TextureImporter:
       name: poison_0
       rect:
         serializedVersion: 2
-        x: 615
-        y: 420
-        width: 120
-        height: 120
+        x: 602
+        y: 394
+        width: 143
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

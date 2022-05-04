@@ -99,7 +99,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 395
-      y: 3115
+      y: 3121
       width: 176
       height: 61
     spriteID: 4966a0fc05de67f49bd2a06a85fef12d
@@ -112,7 +112,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -752, y: 2704}
+    uvTransform: {x: -752, y: 2710}
   - name: Not Playing Needle
     originalName: 
     pivot: {x: 0.768801, y: 0.6035336}
@@ -121,7 +121,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 395
-      y: 2937
+      y: 2943
       width: 230
       height: 95
     spriteID: 609f14af5f1c80243b8f17b613a29f44
@@ -134,7 +134,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -744, y: 2528}
+    uvTransform: {x: -744, y: 2534}
   - name: No Needle
     originalName: 
     pivot: {x: 0.96243787, y: 0.13971417}
@@ -143,7 +143,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 458
-      y: 3312
+      y: 3318
       width: 158
       height: 39
     spriteID: 4b44d47a713c49c4295fc03fee3fb026
@@ -156,7 +156,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -707, y: 2851}
+    uvTransform: {x: -707, y: 2857}
   - name: Notes Fix
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -165,7 +165,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 395
-      y: 2756
+      y: 2762
       width: 196
       height: 173
     spriteID: ef18232ec649ba940bc1fec9e308678d
@@ -178,7 +178,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -550, y: 2165}
+    uvTransform: {x: -550, y: 2171}
   - name: Record player
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -189,7 +189,7 @@ ScriptedImporter:
       x: 4
       y: 1898
       width: 519
-      height: 850
+      height: 859
     spriteID: 6c4989d8d80f6a742bc0d850641b843a
     internalID: 0
     spriteBone: []
@@ -200,7 +200,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1008, y: 1827}
+    uvTransform: {x: -1005, y: 1830}
   - name: Open Fridge
     originalName: 
     pivot: {x: 0.28890455, y: 0.5}
@@ -231,7 +231,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 2756
+      y: 2762
       width: 383
       height: 790
     spriteID: aa03e16a494b35f489b25d77b2e5b422
@@ -244,7 +244,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1185, y: 2583}
+    uvTransform: {x: -1185, y: 2589}
   - name: Gin
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -253,7 +253,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 395
-      y: 3184
+      y: 3190
       width: 55
       height: 128
     spriteID: e318202bc8b7e4847b72cbb57f949ab8
@@ -266,7 +266,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -640, y: 2609}
+    uvTransform: {x: -640, y: 2615}
   - name: Gin Cabinet Open
     originalName: 
     pivot: {x: 0.294782, y: 0.5}
@@ -275,7 +275,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 3554
+      y: 3560
       width: 542
       height: 368
     spriteID: 0e7c6f844ba5cd545bd5f2588d4142a8
@@ -288,7 +288,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -853, y: 3038}
+    uvTransform: {x: -853, y: 3044}
   - name: Gin Cabinet Close
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -319,7 +319,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 624
-      y: 3312
+      y: 3318
       width: 19
       height: 34
     spriteID: 40e6d02b6f41a4e41bcbf4a01c341ab8
@@ -332,7 +332,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -374, y: 2417}
+    uvTransform: {x: -374, y: 2423}
   - name: Broken Vase
     originalName: 
     pivot: {x: 0.42655817, y: 0.97132987}
@@ -341,7 +341,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 395
-      y: 3040
+      y: 3046
       width: 240
       height: 67
     spriteID: 8c6457a70f8125b4888511257c9da265
@@ -354,7 +354,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -518, y: 2164}
+    uvTransform: {x: -518, y: 2170}
   - name: Vase
     originalName: 
     pivot: {x: 0.48711514, y: 0.49999797}
@@ -363,7 +363,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 458
-      y: 3184
+      y: 3190
       width: 57
       height: 120
     spriteID: d9cf781de9ca39647967df7aa4c9a521
@@ -376,7 +376,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -531, y: 2308}
+    uvTransform: {x: -531, y: 2314}
   - name: Stove Door
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -407,7 +407,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 572
-      y: 3184
+      y: 3190
       width: 38
       height: 39
     spriteID: c4b98704d07a3ea42b16fb650f5f15b2
@@ -420,7 +420,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -372, y: 2702}
+    uvTransform: {x: -372, y: 2708}
   - name: Button2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -429,7 +429,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 579
-      y: 3115
+      y: 3121
       width: 45
       height: 46
     spriteID: 9d02d3f18a6238f43998b0603c88f3c4
@@ -442,7 +442,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -236, y: 2635}
+    uvTransform: {x: -236, y: 2641}
   - name: Button3
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -451,7 +451,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 523
-      y: 3184
+      y: 3190
       width: 38
       height: 39
     spriteID: 6614652553b92484aacd797dec6313ca
@@ -464,7 +464,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -173, y: 2705}
+    uvTransform: {x: -173, y: 2711}
   - name: Tap closed
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -473,7 +473,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 554
-      y: 3733
+      y: 3739
       width: 86
       height: 148
     spriteID: ad5f1e462d4149b44921a741239c6a77
@@ -486,7 +486,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 174, y: 3166}
+    uvTransform: {x: 174, y: 3172}
   - name: Tap Open
     originalName: 
     pivot: {x: 0.5000062, y: 0.5884342}
@@ -495,7 +495,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 554
-      y: 3554
+      y: 3560
       width: 79
       height: 171
     spriteID: bb6c618d496b1884bb070a00bcbb218a
@@ -508,7 +508,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: 174, y: 3011}
+    uvTransform: {x: 174, y: 3017}
   - name: Fire
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -517,7 +517,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 458
-      y: 3359
+      y: 3365
       width: 131
       height: 26
     spriteID: 55ebc28eec6216f4d8645b089cbe3924
@@ -530,7 +530,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -186, y: 2804}
+    uvTransform: {x: -186, y: 2810}
   - name: Fire2
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -539,7 +539,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 458
-      y: 3393
+      y: 3399
       width: 131
       height: 26
     spriteID: ef98da5e082228a4aa5208569d916766
@@ -552,7 +552,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -439, y: 2840}
+    uvTransform: {x: -439, y: 2846}
   - name: Layer 35
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -605,7 +605,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 4
-      y: 3930
+      y: 3936
       width: 299
       height: 148
     spriteID: e50918a1078991c46a07b6f04fcd2a13
@@ -618,7 +618,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -1080, y: 3619}
+    uvTransform: {x: -1080, y: 3625}
   - name: Record1
     originalName: 
     pivot: {x: 0.5, y: 0.5}
@@ -627,7 +627,7 @@ ScriptedImporter:
     rect:
       serializedVersion: 2
       x: 311
-      y: 3930
+      y: 3936
       width: 299
       height: 148
     spriteID: cb29db9e2c3e69f48b16c5d109e2ffc5
@@ -640,7 +640,7 @@ ScriptedImporter:
     edges: []
     tessellationDetail: 0
     parentGroupIndex: -1
-    uvTransform: {x: -773, y: 3619}
+    uvTransform: {x: -773, y: 3625}
   characterData:
     bones: []
     parts: []
@@ -720,42 +720,42 @@ ScriptedImporter:
     parentIndex: 0
     spriteID: 4966a0fc05de67f49bd2a06a85fef12d
     layerID: 30
-    mosaicPosition: {x: 395, y: 3115}
+    mosaicPosition: {x: 395, y: 3121}
   - name: Not Playing Needle
     spriteName: Not Playing Needle
     isGroup: 0
     parentIndex: 0
     spriteID: 609f14af5f1c80243b8f17b613a29f44
     layerID: 29
-    mosaicPosition: {x: 395, y: 2937}
+    mosaicPosition: {x: 395, y: 2943}
   - name: No Needle
     spriteName: No Needle
     isGroup: 0
     parentIndex: 0
     spriteID: 4b44d47a713c49c4295fc03fee3fb026
     layerID: 28
-    mosaicPosition: {x: 458, y: 3312}
+    mosaicPosition: {x: 458, y: 3318}
   - name: Record2
     spriteName: Record2
     isGroup: 0
     parentIndex: 0
     spriteID: e50918a1078991c46a07b6f04fcd2a13
     layerID: 49
-    mosaicPosition: {x: 4, y: 3930}
+    mosaicPosition: {x: 4, y: 3936}
   - name: Notes Fix
     spriteName: Notes Fix
     isGroup: 0
     parentIndex: 0
     spriteID: ef18232ec649ba940bc1fec9e308678d
     layerID: 26
-    mosaicPosition: {x: 395, y: 2756}
+    mosaicPosition: {x: 395, y: 2762}
   - name: Record1
     spriteName: Record1
     isGroup: 0
     parentIndex: 0
     spriteID: cb29db9e2c3e69f48b16c5d109e2ffc5
     layerID: 50
-    mosaicPosition: {x: 311, y: 3930}
+    mosaicPosition: {x: 311, y: 3936}
   - name: Record player
     spriteName: Record player
     isGroup: 0
@@ -776,7 +776,7 @@ ScriptedImporter:
     parentIndex: -1
     spriteID: aa03e16a494b35f489b25d77b2e5b422
     layerID: 21
-    mosaicPosition: {x: 4, y: 2756}
+    mosaicPosition: {x: 4, y: 2762}
   - name: New group
     spriteName: 
     isGroup: 1
@@ -790,14 +790,14 @@ ScriptedImporter:
     parentIndex: 10
     spriteID: e318202bc8b7e4847b72cbb57f949ab8
     layerID: 19
-    mosaicPosition: {x: 395, y: 3184}
+    mosaicPosition: {x: 395, y: 3190}
   - name: Gin Cabinet Open
     spriteName: Gin Cabinet Open
     isGroup: 0
     parentIndex: 10
     spriteID: 0e7c6f844ba5cd545bd5f2588d4142a8
     layerID: 18
-    mosaicPosition: {x: 4, y: 3554}
+    mosaicPosition: {x: 4, y: 3560}
   - name: Gin Cabinet Close
     spriteName: Gin Cabinet Close
     isGroup: 0
@@ -811,21 +811,21 @@ ScriptedImporter:
     parentIndex: 10
     spriteID: 40e6d02b6f41a4e41bcbf4a01c341ab8
     layerID: 16
-    mosaicPosition: {x: 624, y: 3312}
+    mosaicPosition: {x: 624, y: 3318}
   - name: Broken Vase
     spriteName: Broken Vase
     isGroup: 0
     parentIndex: 10
     spriteID: 8c6457a70f8125b4888511257c9da265
     layerID: 15
-    mosaicPosition: {x: 395, y: 3040}
+    mosaicPosition: {x: 395, y: 3046}
   - name: Vase
     spriteName: Vase
     isGroup: 0
     parentIndex: 10
     spriteID: d9cf781de9ca39647967df7aa4c9a521
     layerID: 14
-    mosaicPosition: {x: 458, y: 3184}
+    mosaicPosition: {x: 458, y: 3190}
   - name: New group
     spriteName: 
     isGroup: 1
@@ -846,49 +846,49 @@ ScriptedImporter:
     parentIndex: 17
     spriteID: c4b98704d07a3ea42b16fb650f5f15b2
     layerID: 10
-    mosaicPosition: {x: 572, y: 3184}
+    mosaicPosition: {x: 572, y: 3190}
   - name: Button2
     spriteName: Button2
     isGroup: 0
     parentIndex: 17
     spriteID: 9d02d3f18a6238f43998b0603c88f3c4
     layerID: 9
-    mosaicPosition: {x: 579, y: 3115}
+    mosaicPosition: {x: 579, y: 3121}
   - name: Button3
     spriteName: Button3
     isGroup: 0
     parentIndex: 17
     spriteID: 6614652553b92484aacd797dec6313ca
     layerID: 8
-    mosaicPosition: {x: 523, y: 3184}
+    mosaicPosition: {x: 523, y: 3190}
   - name: Tap closed
     spriteName: Tap closed
     isGroup: 0
     parentIndex: 17
     spriteID: ad5f1e462d4149b44921a741239c6a77
     layerID: 7
-    mosaicPosition: {x: 554, y: 3733}
+    mosaicPosition: {x: 554, y: 3739}
   - name: Tap Open
     spriteName: Tap Open
     isGroup: 0
     parentIndex: 17
     spriteID: bb6c618d496b1884bb070a00bcbb218a
     layerID: 6
-    mosaicPosition: {x: 554, y: 3554}
+    mosaicPosition: {x: 554, y: 3560}
   - name: Fire
     spriteName: Fire
     isGroup: 0
     parentIndex: 17
     spriteID: 55ebc28eec6216f4d8645b089cbe3924
     layerID: 5
-    mosaicPosition: {x: 458, y: 3359}
+    mosaicPosition: {x: 458, y: 3365}
   - name: Fire2
     spriteName: Fire2
     isGroup: 0
     parentIndex: 17
     spriteID: ef98da5e082228a4aa5208569d916766
     layerID: 4
-    mosaicPosition: {x: 458, y: 3393}
+    mosaicPosition: {x: 458, y: 3399}
   - name: Layer 35
     spriteName: Layer 35
     isGroup: 0
