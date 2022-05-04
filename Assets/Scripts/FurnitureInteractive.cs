@@ -34,6 +34,7 @@ public class FurnitureInteractive : MonoBehaviour
         //GetComponent<Rigidbody2D>().collisionDetectionMode = CollisionDetectionMode2D.Continuous;
 
         myAudioSource = GetComponent<AudioSource>();
+        myAudioSource.playOnAwake = false;
 
         ani = GetComponent<Animator>();
 

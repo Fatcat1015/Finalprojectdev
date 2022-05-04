@@ -26,11 +26,13 @@ public class InteractScript : MonoBehaviour
         gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
         gameObject.GetComponent<SpriteRenderer>().sprite = before;
         ani = GetComponent<Animator>();
+        myAudioSource = GetComponent<AudioSource>();
+        myAudioSource.playOnAwake = false;
         if (transform.childCount != 0)
         {
             transform.GetChild(0).gameObject.SetActive(false);
             if(transform.childCount == 2) transform.GetChild(1).gameObject.SetActive(false);
-            myAudioSource = GetComponent<AudioSource>();
+            
         }
 
     }

@@ -16,6 +16,7 @@ public class ItemUse : MonoBehaviour
     private void Start()
     {
         myAudioSource = GetComponent<AudioSource>();
+        myAudioSource.playOnAwake = false;
     }
     private void Update()
     {
