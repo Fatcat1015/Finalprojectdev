@@ -12,6 +12,8 @@ public class InteractScript : MonoBehaviour
     public bool destory_once_interacted;
     public Animator ani;
 
+    public bool other_require;
+
     public AudioSource myAudioSource;
     public AudioClip useItemSound;
 

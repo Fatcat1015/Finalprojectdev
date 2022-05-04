@@ -376,6 +376,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -894,6 +895,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -1387,6 +1389,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -2977,6 +2980,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -4256,6 +4260,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -4441,6 +4446,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 356822512}
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   interval: 1
@@ -4759,6 +4765,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   interval: 0
@@ -5998,6 +6005,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -6300,6 +6308,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 8300000, guid: 9d0c7ba0956214b3abec80f53282b14d, type: 3}
   interval: 1
@@ -7964,6 +7973,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -8213,12 +8223,12 @@ MonoBehaviour:
   mom: {fileID: 356822510}
   dad: {fileID: 2067392188}
   grandpa: {fileID: 797529539}
-  mom_plate: {fileID: 0}
-  dad_plate: {fileID: 0}
-  grandpa_plate: {fileID: 0}
-  Mom_done: {fileID: 0}
-  Dad_done: {fileID: 0}
-  Grandpa_done: {fileID: 0}
+  mom_plate: {fileID: 1713385955}
+  dad_plate: {fileID: 45050431}
+  grandpa_plate: {fileID: 572912096}
+  Mom_done: {fileID: 4667167516276228838, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
+  Dad_done: {fileID: -6249031057834043819, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
+  Grandpa_done: {fileID: 2378710224108093706, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
   OpenDoor: {fileID: 0}
 --- !u!1 &666911739
 GameObject:
@@ -8845,6 +8855,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -9547,6 +9558,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -9882,6 +9894,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -11050,6 +11063,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -11247,6 +11261,8 @@ MonoBehaviour:
   safe_num: []
   code: 01000000090000000900000006000000
   poison: {fileID: 1607510636}
+  safe: {fileID: 1879484708}
+  safe_opened: {fileID: 2148984773716644960, guid: b25cecf659d964ad08e785bac91c37d1, type: 3}
 --- !u!1 &979046300
 GameObject:
   m_ObjectHideFlags: 0
@@ -12893,6 +12909,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -14209,6 +14226,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -14343,7 +14361,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.031970024, y: 0.39963353}
+  m_Offset: {x: 0.20237613, y: 1.1752795}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -14354,7 +14372,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2788262, y: 1.799267}
+  m_Size: {x: 3.30127, y: 3.350559}
   m_EdgeRadius: 0
 --- !u!1 &1237024575
 GameObject:
@@ -14629,6 +14647,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -16433,6 +16452,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -18208,7 +18228,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.54, y: 0.98}
+    oldSize: {x: 1.2, y: 1.2}
     newSize: {x: 0.54, y: 0.98}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -18321,6 +18341,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -22251,6 +22272,7 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
+  other_require: 0
   myAudioSource: {fileID: 1975774667}
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   interval: 0

@@ -8,6 +8,9 @@ public class Safe : MonoBehaviour
     public List<int> code = new List<int>();
 
     public GameObject poison;
+    public GameObject safe;
+    public Sprite safe_opened;
+
     void Start()
     {
         foreach (Transform child in transform)
@@ -21,7 +24,12 @@ public class Safe : MonoBehaviour
     {
         if (code_correct()&&poison != null)
         {
+            safe.GetComponent<SpriteRenderer>().sprite = safe_opened;
             poison.SetActive(true);
+            for (int i = 0; i < safe_num.Count; i++)
+            {
+                safe_num[i].gameObject.SetActive(false);
+            }
         }
     }
 
