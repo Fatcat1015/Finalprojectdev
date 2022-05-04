@@ -22,11 +22,13 @@ public class Safe : MonoBehaviour
 
     void Update()
     {
-        if (code_correct()&&poison != null)
+        if (code_correct())
         {
             safe.GetComponent<SpriteRenderer>().sprite = safe_opened;
-            poison.SetActive(true);
-            StartCoroutine(poison.GetComponent<Colletable_initial>().delaybeforecollecting());
+            if(poison != null) {
+                poison.SetActive(true);
+                StartCoroutine(poison.GetComponent<Colletable_initial>().delaybeforecollecting());
+            }
             for (int i = 0; i < safe_num.Count; i++)
             {
                 safe_num[i].gameObject.SetActive(false);

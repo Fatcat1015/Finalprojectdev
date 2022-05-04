@@ -22,7 +22,7 @@ public class Colletable_initial : MonoBehaviour
     {
         if(gameObject != null)
         {
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.1f);
             GetComponent<BoxCollider2D>().enabled = true;
         }
     }
