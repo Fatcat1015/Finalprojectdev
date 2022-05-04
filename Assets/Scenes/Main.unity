@@ -376,7 +376,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -866,7 +867,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: df0e650f787534d6384a07981025ea64, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -891,13 +892,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   before: {fileID: 0}
-  after: {fileID: 21300000, guid: 48024f854a1cb41efa60d6e0ffc1fa27, type: 3}
+  after: {fileID: 21300000, guid: 6e8d152acc45d4be0a40231e44adbba6, type: 3}
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
-  myAudioSource: {fileID: 0}
-  useItemSound: {fileID: 0}
+  requireAnother: 1
+  other_requirement: {fileID: 1788249649}
+  myAudioSource: {fileID: 56088447}
+  useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   interval: 0
   Activatedby: BalloonDeflected
 --- !u!50 &56088445
@@ -1389,7 +1391,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -3166,7 +3169,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -4446,7 +4450,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -4632,7 +4637,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 356822512}
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   interval: 1
@@ -4767,7 +4773,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.72154045, y: -0.42037582}
+  m_Offset: {x: 0.18542862, y: -0.075733066}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -4778,7 +4784,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.2630806, y: 2.9964309}
+  m_Size: {x: 3.3353043, y: 3.6857164}
   m_EdgeRadius: 0
 --- !u!212 &356822515
 SpriteRenderer:
@@ -4840,7 +4846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356822510}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.379997, y: -5.135606, z: 16.998941}
+  m_LocalPosition: {x: -9.1, y: -5.29, z: 16.998941}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1844823825}
@@ -4951,7 +4957,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   interval: 0
@@ -5553,7 +5560,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
 --- !u!212 &426249890
 SpriteRenderer:
@@ -5595,7 +5602,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 48024f854a1cb41efa60d6e0ffc1fa27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -6191,7 +6198,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -6495,7 +6503,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 8300000, guid: 9d0c7ba0956214b3abec80f53282b14d, type: 3}
   interval: 1
@@ -8331,7 +8340,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -8581,13 +8591,13 @@ MonoBehaviour:
   mom: {fileID: 356822510}
   dad: {fileID: 2067392188}
   grandpa: {fileID: 797529539}
-  mom_plate: {fileID: 0}
-  dad_plate: {fileID: 0}
-  grandpa_plate: {fileID: 0}
-  Mom_done: {fileID: 0}
-  Dad_done: {fileID: 0}
-  Grandpa_done: {fileID: 0}
-  OpenDoor: {fileID: 0}
+  mom_plate: {fileID: 1713385955}
+  dad_plate: {fileID: 45050431}
+  grandpa_plate: {fileID: 572912096}
+  Mom_done: {fileID: 4667167516276228838, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
+  Dad_done: {fileID: -6249031057834043819, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
+  Grandpa_done: {fileID: 2378710224108093706, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
+  OpenDoor: {fileID: -3491923112297647643, guid: 462d4ab3abb094c0997095258bcb89bc, type: 3}
 --- !u!1 &666911739
 GameObject:
   m_ObjectHideFlags: 0
@@ -9184,7 +9194,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 48024f854a1cb41efa60d6e0ffc1fa27, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9213,7 +9223,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 1
+  other_requirement: {fileID: 1788249649}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -10083,7 +10094,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -11335,7 +11347,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -13181,7 +13194,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -14498,7 +14512,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -14919,7 +14934,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -16727,7 +16743,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 1
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -17303,7 +17320,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 6e8d152acc45d4be0a40231e44adbba6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17372,7 +17389,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5, y: 5}
+  m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
 --- !u!1 &1511772829
 GameObject:
@@ -18616,7 +18633,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 0
@@ -21053,7 +21071,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1844823824}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.5435905, y: 0.6147027, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0.9, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 356822516}
@@ -21876,7 +21894,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 0}
   useItemSound: {fileID: 0}
   interval: 1
@@ -22736,7 +22755,8 @@ MonoBehaviour:
   interacted: 0
   destory_once_interacted: 0
   ani: {fileID: 0}
-  other_require: 0
+  requireAnother: 0
+  other_requirement: {fileID: 0}
   myAudioSource: {fileID: 1975774667}
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   interval: 0

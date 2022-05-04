@@ -48,6 +48,9 @@ public class Finalgame_GM : MonoBehaviour
         if (a && b && c)
         {
             GetComponent<SpriteRenderer>().sprite = OpenDoor;
+            mom_plate.SetActive(false);
+            dad_plate.SetActive(false);
+            grandpa_plate.SetActive(false);
         }
     }
 }

@@ -12,7 +12,8 @@ public class InteractScript : MonoBehaviour
     public bool destory_once_interacted;
     public Animator ani;
 
-    public bool other_require;
+    public bool requireAnother;
+    public GameObject other_requirement;
 
     public AudioSource myAudioSource;
     public AudioClip useItemSound;
@@ -45,11 +46,25 @@ public class InteractScript : MonoBehaviour
         {
             if (ani != null) ani.SetBool("Activated", true);
             gameObject.GetComponent<SpriteRenderer>().sprite = after;
-            if (transform.childCount != 0)
+            if (requireAnother)
             {
+                if (other_requirement.GetComponent<FurnitureInteractive>().open)
+                {
+                    if (transform.childCount != 0)
+                    {
+
+                        transform.GetChild(0).gameObject.SetActive(true);
+                        if (transform.childCount == 2) transform.GetChild(1).gameObject.SetActive(true);
+                    }
+                }
+            }
+            else if (transform.childCount != 0)
+            {
+
                 transform.GetChild(0).gameObject.SetActive(true);
                 if (transform.childCount == 2) transform.GetChild(1).gameObject.SetActive(true);
             }
+
             //using items
             if (!alreadyPlayed)
             {
@@ -78,12 +93,19 @@ public class InteractScript : MonoBehaviour
     {
 
         yield return new WaitForSeconds(seconds);
+
         if (transform.childCount != 0)
         {
-            GameObject child = transform.GetChild(0).gameObject;
-            child.SetActive(true);
-            child.transform.SetParent(null);
-            Destroy(gameObject);
+            if (requireAnother)
+            {
+                if (other_requirement.GetComponent<FurnitureInteractive>().open)
+                {
+                    GameObject child = transform.GetChild(0).gameObject;
+                    child.SetActive(true);
+                    child.transform.SetParent(null);
+                    Destroy(gameObject);
+                }
+            }
         }
 
         yield return null;
