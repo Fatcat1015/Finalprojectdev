@@ -26,6 +26,7 @@ public class Safe : MonoBehaviour
         {
             safe.GetComponent<SpriteRenderer>().sprite = safe_opened;
             poison.SetActive(true);
+            StartCoroutine(poison.GetComponent<Colletable_initial>().delaybeforecollecting());
             for (int i = 0; i < safe_num.Count; i++)
             {
                 safe_num[i].gameObject.SetActive(false);
