@@ -38,7 +38,7 @@ public class flagpuzzleGM : MonoBehaviour
         {
             for (int i = 0; i < Flags.Count; i++)
             {
-                Flags[i].GetComponent<FlagPiece>().finished = true;
+                if(Flags[i] != null)Flags[i].GetComponent<FlagPiece>().finished = true;
             }
             if(destroy!= null) Destroy(destroy);
             if(prize!= null) prize.SetActive(true);

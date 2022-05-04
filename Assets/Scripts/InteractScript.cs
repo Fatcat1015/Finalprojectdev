@@ -106,6 +106,16 @@ public class InteractScript : MonoBehaviour
                     Destroy(gameObject);
                 }
             }
+            else
+            {
+                GameObject child = transform.GetChild(0).gameObject;
+                child.SetActive(true);
+                if (gameObject.transform.parent != null) child.transform.SetParent(gameObject.transform.parent);
+                else {
+                    child.transform.SetParent(null);
+                }
+                Destroy(gameObject);
+            }
         }
 
         yield return null;
