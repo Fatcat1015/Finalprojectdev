@@ -29,12 +29,12 @@ public class PosterTetris : MonoBehaviour
             {
                 if (Camera.main.ScreenToWorldPoint(Input.mousePosition).x > transform.position.x)
                 {
-                    transform.position += new Vector3(2, 0, 0);
+                    if(transform.localPosition.x<2)transform.position += new Vector3(2, 0, 0);
                     //move right
                 }
                 else
                 {
-                    transform.position += new Vector3(-2, 0, 0);
+                    if (transform.localPosition.x > -2) transform.position += new Vector3(-2, 0, 0);
                     //move left
                 }
             }
