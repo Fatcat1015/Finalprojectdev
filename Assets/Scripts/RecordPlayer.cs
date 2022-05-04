@@ -11,6 +11,9 @@ public class RecordPlayer : MonoBehaviour
     GameObject Record;
     GameObject Needle;
 
+    GameObject strangled;
+    GameObject stamp;
+
     public AudioClip danceMusic;
     public AudioClip bgm;
 
@@ -22,6 +25,11 @@ public class RecordPlayer : MonoBehaviour
     {
         notes = GameObject.Find("Notes");
         notes.SetActive(false);
+
+        strangled = GameObject.Find("rope slot");
+
+        stamp = GameObject.Find("stamp3");
+        stamp.SetActive(false);
 
         Record = GameObject.Find("RecordSlot");
         Needle = GameObject.Find("Playing Needle");
@@ -36,14 +44,19 @@ public class RecordPlayer : MonoBehaviour
         {
             notes.SetActive(true);
             playing = true;
-            mom.GetComponent<Animator>().enabled = true;
+            if (stamp != null) stamp.SetActive(true);
+            if(strangled.GetComponent<InteractScript>().interacted == false) mom.GetComponent<Animator>().enabled = true;
+
         }
         else
         {
             notes.SetActive(false);
             playing_ = true;
-            mom.GetComponent<Animator>().enabled = false;
+            if (stamp != null) stamp.SetActive(false);
+            if (strangled.GetComponent<InteractScript>().interacted == false) mom.GetComponent<Animator>().enabled = false;
         }
+
+        if (strangled.GetComponent<InteractScript>().interacted) mom.GetComponent<SpriteRenderer>().enabled = false;
 
         if (playing && as_bgm.clip == bgm)
         {
