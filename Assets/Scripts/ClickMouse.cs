@@ -148,7 +148,12 @@ public class ClickMouse : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)//when collided with collectable
     {
-        if (collision != null && waitover)
+        if (collision.tag == "Collectable")
+        {
+            interact_collect = true;
+            collided_obj = collision.gameObject;
+        }
+            if (collision != null && waitover)
         {
             collected_obj = collision.gameObject;
             if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
