@@ -15,9 +15,13 @@ public class rope : MonoBehaviour
     }
     void Update()
     {
-        if(ii.GetComponent<InteractScript>().interacted&& iii.GetComponent<InteractScript>().interacted)
+        if(ii!= null && iii != null)
         {
-            item.SetActive(true);
+            if (ii.GetComponent<InteractScript>().interacted && iii.GetComponent<InteractScript>().interacted)
+            {
+                item.SetActive(true);
+            }
         }
+        
     }
 }

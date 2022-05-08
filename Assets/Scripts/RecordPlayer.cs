@@ -20,6 +20,7 @@ public class RecordPlayer : MonoBehaviour
     AudioSource as_bgm;
 
     GameObject mom;
+    GameObject mom_dancing;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,17 +36,24 @@ public class RecordPlayer : MonoBehaviour
         Needle = GameObject.Find("Playing Needle");
         as_bgm = GameObject.Find("sounds").GetComponent<AudioSource>();
         mom = GameObject.Find("Mom_figure");
+        mom_dancing = GameObject.Find("Mom-dancing");
+
+        mom_dancing.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Record.GetComponent<InteractScript>().interacted && Needle.GetComponent<FurnitureInteractive>().open)
+        if (Record.GetComponent<InteractScript>().interacted && Needle.GetComponent<FurnitureInteractive>().open)//if music is playing
         {
             notes.SetActive(true);
             playing = true;
-            if (stamp != null) stamp.SetActive(true);
-            if(strangled.GetComponent<InteractScript>().interacted == false) mom.GetComponent<Animator>().enabled = true;
+            if (stamp != null) stamp.SetActive(true);//stamp when mom dancing
+            if (strangled.GetComponent<InteractScript>().interacted == false)
+            {
+                mom_dancing.SetActive(true);
+                mom.GetComponent<SpriteRenderer>().enabled = false;
+            }
 
         }
         else
@@ -53,10 +61,18 @@ public class RecordPlayer : MonoBehaviour
             notes.SetActive(false);
             playing_ = true;
             if (stamp != null) stamp.SetActive(false);
-            if (strangled.GetComponent<InteractScript>().interacted == false) mom.GetComponent<Animator>().enabled = false;
+            if (strangled.GetComponent<InteractScript>().interacted == false)
+            {
+                mom_dancing.SetActive(false);
+                mom.GetComponent<SpriteRenderer>().enabled = true;
+            }
         }
 
-        if (strangled.GetComponent<InteractScript>().interacted) mom.GetComponent<SpriteRenderer>().enabled = false;
+        if (strangled.GetComponent<InteractScript>().interacted)
+        {
+            mom_dancing.SetActive(false);
+            mom.GetComponent<SpriteRenderer>().enabled = false;
+        }
 
         if (playing && as_bgm.clip == bgm)
         {

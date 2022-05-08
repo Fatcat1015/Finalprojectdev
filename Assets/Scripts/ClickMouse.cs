@@ -27,7 +27,7 @@ public class ClickMouse : MonoBehaviour
     public bool interact_furniture;
     public bool interact_number;
     public bool interact_others;
-    public bool interact_interact;
+    public bool interact_collect;
     FurnitureInteractive Finteractive;
 
 
@@ -87,47 +87,16 @@ public class ClickMouse : MonoBehaviour
             }
         }
 
-        if (interact_interact)
+        if (interact_collect)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                if(collided_obj!= null)
+                if(collected_obj.tag == "Collectable")
                 {
-
-
-                    if (collided_obj.GetComponent<InteractScript>().drawer)
-                    {
-
-                        if (collided_obj.GetComponent<InteractScript>().Activatedby == null)
-                        {
-                            collided_obj.gameObject.GetComponent<InteractScript>().interacted = !collided_obj.gameObject.GetComponent<InteractScript>().interacted;
-                        }
-                        else
-                        {
-                            if (item != null)
-                            {
-                                if (collided_obj.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
-                                {
-                                    collided_obj.gameObject.GetComponent<InteractScript>().interacted = true;
-                                    Destroy(item);
-                                    StartCoroutine(waittime());
-                                }
-                            }
-                        }
-                    }
-                    else
-
-                    if (item != null)
-                    {
-                        if (collided_obj.gameObject.GetComponent<InteractScript>().Activatedby == item.name)
-                        {
-                            collided_obj.gameObject.GetComponent<InteractScript>().interacted = true;
-                            Destroy(item);
-                            StartCoroutine(waittime());
-                        }
-                    }
+                    myAudioSource.Play();
+                    inventory.GetComponent<Inventory2_0>().AddItem(collected_obj.name);
+                    Destroy(collected_obj);
                 }
-                
             }
         }
     }
@@ -147,9 +116,9 @@ public class ClickMouse : MonoBehaviour
             interacting_num = collision.gameObject;
         }
 
-        if (collision.tag == "Interact")
+        if (collision.tag == "Collectable")
         {
-            interact_interact = true;
+            interact_collect = true;
             collided_obj = collision.gameObject;
         }
 
@@ -169,9 +138,9 @@ public class ClickMouse : MonoBehaviour
             interacting_num = null;
         }
 
-        if (collision.tag == "Interact")
+        if (collision.tag == "Collectable")
         {
-            interact_interact = false;
+            interact_collect = false;
             collided_obj = null;
         }
     }
@@ -181,9 +150,10 @@ public class ClickMouse : MonoBehaviour
     {
         if (collision != null && waitover)
         {
+            collected_obj = collision.gameObject;
             if (Input.GetKey(KeyCode.Mouse0) || Input.GetMouseButton(0))
             {
-                if (collision.tag == "Collectable")
+                /*if (collision.tag == "Collectable")
                 {
                     myAudioSource.Play();
                     collected_obj = collision.gameObject;
@@ -191,7 +161,9 @@ public class ClickMouse : MonoBehaviour
                     Destroy(collected_obj);
                     StartCoroutine(waittime());
                 }
-                else if (collision.tag == "Zoom")
+                else 
+                
+                */if (collision.tag == "Zoom")
                 {
                     RoomMovement rm = FindObjectOfType<RoomMovement>();
                     rm.zoomin(collision.gameObject.transform.GetChild(0).transform);

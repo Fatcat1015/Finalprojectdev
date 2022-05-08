@@ -10,14 +10,17 @@ public class grandpa_manager : MonoBehaviour
 
     public Sprite dead_grandpa;
 
+    bool alreadyplayed;
+
     // Update is called once per frame
     void Update()
     {
-        if (poisoned.GetComponent<InteractScript>().interacted)
+        if (poisoned.GetComponent<InteractScript>().interacted&& !alreadyplayed)
         {
             interacted = true;
             GetComponent<AudioSource>().PlayOneShot(GetComponent<AudioSource>().clip);
             GetComponent<SpriteRenderer>().sprite = dead_grandpa;
+            alreadyplayed = true;
         }
     }
 }

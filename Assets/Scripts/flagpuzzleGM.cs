@@ -74,10 +74,14 @@ public class flagpuzzleGM : MonoBehaviour
 
     private bool winning()
     {
-        for (int i = 0; i < Flags.Count; i++)
+        if(prize != null)
         {
-            if (Flags[i].transform.position != FlagPos[i]) return false;
+            for (int i = 0; i < Flags.Count; i++)
+            {
+                if (Flags[i].transform.position != FlagPos[i]) return false;
+            }
         }
+        
         return true;
     }
 

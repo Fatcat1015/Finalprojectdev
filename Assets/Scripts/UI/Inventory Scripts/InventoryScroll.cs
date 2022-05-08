@@ -14,7 +14,7 @@ public class InventoryScroll : MonoBehaviour
         {
             if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
-                if(transform.localPosition.y  <= 575) transform.Translate(0, 35, 0);
+                if(transform.localPosition.y  <= 236) transform.Translate(0, 35, 0);
             }
             if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {

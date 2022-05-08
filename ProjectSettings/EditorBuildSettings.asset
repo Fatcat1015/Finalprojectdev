@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
     guid: 120972433e824430c83ebc90f9bf1b77
   - enabled: 1
-    path: Assets/Scenes/cakeminigame.unity
-    guid: 67bf7364973be4896b07a56c563ceae5
+    path: Assets/Scenes/End.unity
+    guid: 3f2fd24f7b17f734083bfc1eda879524
   m_configObjects: {}

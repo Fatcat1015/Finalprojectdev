@@ -109,10 +109,10 @@ TextureImporter:
       name: stamp1_0
       rect:
         serializedVersion: 2
-        x: 738
-        y: 817
-        width: 250
-        height: 244
+        x: 707
+        y: 763
+        width: 310
+        height: 317
       alignment: 9
       pivot: {x: 0.5063762, y: 0.51912767}
       border: {x: 0, y: 0, z: 0, w: 0}

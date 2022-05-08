@@ -18,6 +18,10 @@ public class PosterTetris : MonoBehaviour
 
     void Update()
     {
+        if(transform.position.y >= 20)
+        {
+            GameObject.Find("Tetris Game Manager").GetComponent<TetrisGM>().playing = false;
+        }
         if (matched)
         {
             Destroy(gameObject);

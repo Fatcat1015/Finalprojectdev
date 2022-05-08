@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Finalgame_GM : MonoBehaviour
 {
@@ -19,10 +20,12 @@ public class Finalgame_GM : MonoBehaviour
 
     public Sprite OpenDoor;
 
-    private bool a;
-    private bool b;
-    private bool c;
+    public bool a;
+    public bool b;
+    public bool c;
 
+
+    bool can_escape;
 
 
     private void Update()
@@ -51,6 +54,23 @@ public class Finalgame_GM : MonoBehaviour
             mom_plate.SetActive(false);
             dad_plate.SetActive(false);
             grandpa_plate.SetActive(false);
+            if (can_escape)
+            {
+                if (Input.GetMouseButtonDown(0))
+                {
+                    SceneManager.LoadScene("End", LoadSceneMode.Single);
+                }
+            }
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player") can_escape = true;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player") can_escape = false;
     }
 }

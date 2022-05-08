@@ -24,6 +24,9 @@ public class InteractScript : MonoBehaviour
     public AudioClip useItemSound;
 
     bool alreadyPlayed = false;
+    bool can_activate;
+
+    bool wrongitem;
 
     [SerializeField] private int interval = 1;
 
@@ -91,11 +94,9 @@ public class InteractScript : MonoBehaviour
             {
 
                 transform.GetChild(0).gameObject.SetActive(true);
-                //StartCoroutine(transform.GetChild(0).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
                 if (transform.childCount == 2)
                 {
                     transform.GetChild(1).gameObject.SetActive(true);
-                    //StartCoroutine(transform.GetChild(1).gameObject.GetComponent<Colletable_initial>().delaybeforecollecting());
                 }
             }
 
@@ -127,11 +128,37 @@ public class InteractScript : MonoBehaviour
             }
         }
 
+        
+        if (can_activate)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                if (drawer)
+                {
+                    interacted = !interacted;
+                    alreadyPlayed = false;
+                }
+                else
+                {
+                    interacted = true;
+                }
+                if(!drawer||Activatedby != "")Destroy(GameObject.Find("Player").GetComponent<ClickMouse>().item);
+            }
+        }
+
+        if(wrongitem)
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                //myAudioSource.PlayOneShot(Resources.Load<AudioClip>("fail"));
+                wrongitem = false;
+            }
+        }
+
     }
 
     private IEnumerator activate_once(int seconds)
     {
-
         yield return new WaitForSeconds(seconds);
 
         if (transform.childCount != 0)
@@ -149,7 +176,6 @@ public class InteractScript : MonoBehaviour
             }
             else
             {
-                Debug.Log("!");
                 GameObject child = transform.GetChild(0).gameObject;
                 child.SetActive(true);
                 if (gameObject.transform.parent != null) child.transform.SetParent(gameObject.transform.parent);
@@ -165,5 +191,38 @@ public class InteractScript : MonoBehaviour
         }
 
         yield return null;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (drawer&&Activatedby == null)
+        {
+            if (collision.tag == "Player")
+            {
+                can_activate = true;
+            }
+        }
+        else
+        if(collision.tag == "Player"&& collision.GetComponent<ClickMouse>().item != null)
+        {
+            if(collision.GetComponent<ClickMouse>().item.name == Activatedby)
+            {
+                can_activate = true;
+            }
+            else
+            {
+                wrongitem = true;
+                can_activate = false;
+            }
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            can_activate = false;
+            wrongitem = false;
+        }
     }
 }
