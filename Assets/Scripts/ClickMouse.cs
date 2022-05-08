@@ -200,7 +200,8 @@ public class ClickMouse : MonoBehaviour
 
     public void hover(GameObject item)
     {
-        hovering_over_slot = item.name;
+        if (item != null) hovering_over_slot = item.name;
+        else hovering_over_slot = null;
     }
 
 }

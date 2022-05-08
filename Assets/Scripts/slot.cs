@@ -10,4 +10,10 @@ public class slot : MonoBehaviour
         GameObject player = GameObject.Find("Player");
         player.GetComponent<ClickMouse>().hover(gameObject);
     }
+
+    public void NotHover()
+    {
+        GameObject player = GameObject.Find("Player");
+        player.GetComponent<ClickMouse>().hover(null);
+    }
 }
