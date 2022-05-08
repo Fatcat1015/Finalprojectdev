@@ -61,18 +61,24 @@ public class RecordPlayer : MonoBehaviour
             notes.SetActive(false);
             playing_ = true;
             if (stamp != null) stamp.SetActive(false);
-            if (strangled.GetComponent<InteractScript>().interacted == false)
+            if(strangled!= null)
             {
-                mom_dancing.SetActive(false);
-                mom.GetComponent<SpriteRenderer>().enabled = true;
+                if (strangled.GetComponent<InteractScript>().interacted == false)
+                {
+                    mom_dancing.SetActive(false);
+                    mom.GetComponent<SpriteRenderer>().enabled = true;
+                }
             }
         }
-
-        if (strangled.GetComponent<InteractScript>().interacted)
+        if (strangled != null)
         {
-            mom_dancing.SetActive(false);
-            mom.GetComponent<SpriteRenderer>().enabled = false;
+            if (strangled.GetComponent<InteractScript>().interacted)
+            {
+                mom_dancing.SetActive(false);
+                mom.GetComponent<SpriteRenderer>().enabled = false;
+            }
         }
+            
 
         if (playing && as_bgm.clip == bgm)
         {
