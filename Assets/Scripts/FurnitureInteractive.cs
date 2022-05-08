@@ -50,6 +50,18 @@ public class FurnitureInteractive : MonoBehaviour
             if (children[i] == null) children.Remove(children[i]);
         }
 
+        if(transform.childCount > children.Count)
+        {
+            for (int i = 0; i < children.Count; i++)
+            {
+                children.Remove(children[i]);
+            }
+            foreach (Transform child in transform)
+            {
+                children.Add(child.gameObject);
+            }
+        }
+
         if (open)
         {
             if (drawer)

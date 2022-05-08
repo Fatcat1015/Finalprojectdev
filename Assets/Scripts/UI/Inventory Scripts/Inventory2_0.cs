@@ -27,7 +27,8 @@ public class Inventory2_0 : MonoBehaviour
         {
             if(UsedSlots[i].transform.childCount == 0)
             {
-                InventorySlots.Add(UsedSlots[i]);
+                //InventorySlots.Add(UsedSlots[i]);
+                InventorySlots.Insert(0, UsedSlots[i]);
                 UsedSlots.Remove(UsedSlots[i]);
             }
         }

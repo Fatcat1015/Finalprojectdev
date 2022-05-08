@@ -7,6 +7,8 @@ public class eyeball_game : MonoBehaviour
     public List<GameObject> eyeball = new List<GameObject>();
     public Sprite finished_cake;
     public GameObject cake_slice;
+
+    public bool won;
     // Start is called before the first frame update
     void Start()
     {
@@ -58,6 +60,7 @@ public class eyeball_game : MonoBehaviour
             }
                 GetComponent<SpriteRenderer>().sprite = finished_cake;
             if(cake_slice!=null)cake_slice.SetActive(true);
+            won = true;
         }
     }
 

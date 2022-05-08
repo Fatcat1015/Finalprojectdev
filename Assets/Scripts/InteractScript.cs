@@ -19,6 +19,8 @@ public class InteractScript : MonoBehaviour
 
     public bool requireAnother;
     public GameObject other_requirement;
+    public bool conflicted;
+    public GameObject conflict_obj;
 
     public AudioSource myAudioSource;
     public AudioClip useItemSound;
@@ -54,6 +56,22 @@ public class InteractScript : MonoBehaviour
 
     private void Update()
     {
+        if (conflicted)
+        {
+            if(conflict_obj!= null)
+            {
+                if (conflict_obj.GetComponent<InteractScript>().interacted)
+                {
+                    GetComponent<BoxCollider2D>().enabled = false;
+                }
+            }
+            else
+            {
+                GetComponent<BoxCollider2D>().enabled = true;
+            }
+            
+        }
+
         if (interacted)
         {
             if (ani != null) ani.SetBool("Activated", true);
@@ -142,7 +160,7 @@ public class InteractScript : MonoBehaviour
                 {
                     interacted = true;
                 }
-                if(!drawer||Activatedby != "")Destroy(GameObject.Find("Player").GetComponent<ClickMouse>().item);
+                if(!drawer||Activatedby != null)Destroy(GameObject.Find(Activatedby));
             }
         }
 
@@ -170,7 +188,7 @@ public class InteractScript : MonoBehaviour
                     GameObject child = transform.GetChild(0).gameObject;
                     child.SetActive(true);
                     
-                    child.transform.SetParent(null);
+                    child.transform.SetParent(transform.parent);
                     Destroy(gameObject);
                 }
             }
