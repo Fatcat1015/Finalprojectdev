@@ -6,6 +6,7 @@ public class flagpuzzleGM : MonoBehaviour
 {
     public List<GameObject> Flags = new List<GameObject>();
     public List<Vector3> FlagPos = new List<Vector3>();
+    public List<Quaternion> FlagRot = new List<Quaternion>();
     [SerializeField] private List<int> shuffle_order = new List<int>();
 
     public bool playing;
@@ -25,23 +26,33 @@ public class flagpuzzleGM : MonoBehaviour
             FlagPos.Add(child.transform.position);
         }
 
-        for(int i = 0; i < Flags.Count; i++)
+        foreach (Transform child in gameObject.transform)
+        {
+            FlagRot.Add(child.transform.rotation);
+        }
+
+        for (int i = 0; i < Flags.Count; i++)
         {
             Flags[i].transform.position = FlagPos[shuffle_order[i]];
+            Flags[i].transform.rotation = FlagRot[shuffle_order[i]];
             Flags[i].GetComponent<FlagPiece>().index = shuffle_order[i];
         }
     }
 
     private void Update()
     {
-        if (winning())
+
+        if(prize!= null)
         {
-            for (int i = 0; i < Flags.Count; i++)
+            if (winning())
             {
-                if(Flags[i] != null)Flags[i].GetComponent<FlagPiece>().finished = true;
+                for (int i = 0; i < Flags.Count; i++)
+                {
+                    if (Flags[i] != null) Flags[i].GetComponent<FlagPiece>().finished = true;
+                }
+                if (destroy != null) Destroy(destroy);
+                if (prize != null) prize.SetActive(true);
             }
-            if(destroy!= null) Destroy(destroy);
-            if(prize!= null) prize.SetActive(true);
         }
         
     }
@@ -59,11 +70,13 @@ public class flagpuzzleGM : MonoBehaviour
             }
         }
         flag.transform.position = FlagPos[pos];
+        flag.transform.rotation = FlagRot[pos];
         for (int i = 0; i < Flags.Count; i++)//switch place with other flag;
         {
             if (Flags[i].GetComponent<FlagPiece>().index == pos)
             {
                 Flags[i].transform.position = FlagPos[flag.GetComponent<FlagPiece>().index];
+                Flags[i].transform.rotation = FlagRot[flag.GetComponent<FlagPiece>().index];
                 Flags[i].GetComponent<FlagPiece>().index = flag.GetComponent<FlagPiece>().index;
             }
         }
