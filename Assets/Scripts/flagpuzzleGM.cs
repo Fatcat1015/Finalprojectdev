@@ -13,6 +13,8 @@ public class flagpuzzleGM : MonoBehaviour
     public GameObject prize;
     public GameObject destroy;
 
+    bool won;
+
     private void Start()
     {
         prize.SetActive(false);
@@ -42,9 +44,7 @@ public class flagpuzzleGM : MonoBehaviour
     private void Update()
     {
 
-        if(prize!= null)
-        {
-            if (winning())
+            if (!won&&winning())
             {
                 for (int i = 0; i < Flags.Count; i++)
                 {
@@ -52,8 +52,8 @@ public class flagpuzzleGM : MonoBehaviour
                 }
                 if (destroy != null) Destroy(destroy);
                 if (prize != null) prize.SetActive(true);
+                won = true;
             }
-        }
         
     }
 
@@ -87,7 +87,7 @@ public class flagpuzzleGM : MonoBehaviour
 
     private bool winning()
     {
-        if(prize != null)
+        if(!won)
         {
             for (int i = 0; i < Flags.Count; i++)
             {
