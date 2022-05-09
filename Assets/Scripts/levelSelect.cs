@@ -14,4 +14,11 @@ public class levelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("StartScreen");
     }
+
+    public void stopplaying()
+    {
+        //Debug.Log("!");
+        Application.Quit();
+
+    }
 }
