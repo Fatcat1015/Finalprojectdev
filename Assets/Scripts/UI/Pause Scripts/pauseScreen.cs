@@ -5,53 +5,36 @@ using UnityEngine;
 public class pauseScreen : MonoBehaviour
 {
     public GameObject pauseScreenUI;
-    public bool pauseScreenActive = false;
+    //public bool pauseScreenActive;
 
-    public void Start()
+    public void Awake()
     {
         pauseScreenUI.SetActive(false);
+        //pauseScreenActive = false;
     }
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
-            gameObject.SetActive(!gameObject.activeSelf);
-
+            Debug.Log("ESC IS BEING PRESSED");
         }
-        //CheckPauseScreenActive();
-        /*if (Input.GetKeyDown(KeyCode.Space))
+        if (pauseScreenUI.activeSelf == true)
         {
-            Debug.Log("ESC is being pressed");
-
+            Debug.Log("pause screen UI is active");
         }
-        if (pauseScreenUI != null && !pauseScreenActive)
+        else if (pauseScreenUI.activeSelf == false)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                pauseScreenActive = true;
-                pauseScreenUI.SetActive(true);
-            }
-        }
-        else if (pauseScreenActive)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                pauseScreenUI.SetActive(false);
-                pauseScreenActive = false;
-            }
+            Debug.Log("pause screen UI is NOT ACTIVE");
         }*/
-    }
 
-    public void CheckPauseScreenActive()
-    {
-        if (!pauseScreenActive && pauseScreenUI !=null)
+        if (pauseScreenUI.activeSelf == false && Input.GetKeyDown(KeyCode.Escape))
+        {
+           pauseScreenUI.SetActive(true);
+        }
+        else if (pauseScreenUI.activeSelf == true && Input.GetKeyDown(KeyCode.Escape))
         {
             pauseScreenUI.SetActive(false);
-        }
-        else if (pauseScreenActive && pauseScreenUI != null)
-        {
-            pauseScreenUI.SetActive(true);
         }
     }
 }
