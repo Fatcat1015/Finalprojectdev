@@ -5,6 +5,7 @@ using UnityEngine;
 public class pauseScreen : MonoBehaviour
 {
     public GameObject pauseScreenUI;
+    public GameObject Room;
     //public bool pauseScreenActive;
 
     public void Awake()
@@ -31,10 +32,12 @@ public class pauseScreen : MonoBehaviour
         if (pauseScreenUI.activeSelf == false && Input.GetKeyDown(KeyCode.Escape))
         {
            pauseScreenUI.SetActive(true);
+           Room.SetActive(false);
         }
         else if (pauseScreenUI.activeSelf == true && Input.GetKeyDown(KeyCode.Escape))
         {
             pauseScreenUI.SetActive(false);
+            Room.SetActive(true);
         }
     }
 }
