@@ -16,7 +16,7 @@ public class RoomMovement : MonoBehaviour
 
     public void Awake()
     {
-        Camera.main.transform.position = currentRoom.background.position + new Vector3 (horizontal_shift, 0, -1);
+        Camera.main.transform.position = currentRoom.background.position + new Vector3 (horizontal_shift, 0, -1); //sets camera to room
         leftA = GameObject.Find("Left Arrow");
         rightA = GameObject.Find("RightArrow");
         backA = GameObject.Find("BackArrow");
