@@ -6,7 +6,7 @@ using TMPro;
 public class dad_hint : MonoBehaviour
 {
     public GameObject knife;
-
+    public GameObject dadTrigger;
     private TextMeshPro hint;
 
     [SerializeField] public List<string> dialogue = new List<string>();
@@ -16,13 +16,17 @@ public class dad_hint : MonoBehaviour
     {
         hint = GetComponent<TextMeshPro>();
     }
-    // Update is called once per frame
+
     void Update()
     {
+        if (dadTrigger.GetComponent<InteractScript>().interacted)
+        {
+            hint.text = dialogue[1];
+        }
         if (knife.GetComponent<InteractScript>().interacted)
-                {
-                    hint.text = dialogue[1];
-                }
+        {
+            hint.text = dialogue[2];
+        }
         else
         {
             hint.text = dialogue[0];

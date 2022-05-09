@@ -7,7 +7,6 @@ public class ClickMouse : MonoBehaviour
     //public InventoryManager inventoryManager;
     //InventoryManager inventoryManager;
 
-
     GameObject collected_obj;
     private BoxCollider2D cursor;
 
@@ -15,7 +14,6 @@ public class ClickMouse : MonoBehaviour
 
     GameObject inventory;
     public GameObject item;
-
 
     public GameObject item_holding;
     public AudioSource myAudioSource;
@@ -30,20 +28,17 @@ public class ClickMouse : MonoBehaviour
     public bool interact_collect;
     FurnitureInteractive Finteractive;
 
-
     public bool waitover = true;
 
     public string hovering_over_slot;
 
     private GameObject interacting_num;
 
-
     private void Awake()
     {
         mainCamera = Camera.main;
         //sets the camera 
     }
-
 
     private void Start()
     {
@@ -52,9 +47,8 @@ public class ClickMouse : MonoBehaviour
         inventory = GameObject.FindGameObjectWithTag("InventManager");
         myAudioSource = GetComponent<AudioSource>();
 
-
-
     }
+
     private void Update()
     {
         transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);//make object follow mouse
@@ -173,17 +167,8 @@ public class ClickMouse : MonoBehaviour
                     RoomMovement rm = FindObjectOfType<RoomMovement>();
                     rm.zoomin(collision.gameObject.transform.GetChild(0).transform);
                 }
-
-
             }
-
-
-
-
         }
-
-
-
     }
 
     public void UseItem(GameObject item_picked)
