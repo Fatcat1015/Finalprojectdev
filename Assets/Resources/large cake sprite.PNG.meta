@@ -132,7 +132,7 @@ TextureImporter:
         width: 348
         height: 283
       alignment: 9
-      pivot: {x: 0.50389355, y: 0.66279304}
+      pivot: {x: 0.5, y: 0.44}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -169,12 +169,12 @@ TextureImporter:
       name: large cake sprite_2
       rect:
         serializedVersion: 2
-        x: 861
-        y: 586
+        x: 855
+        y: 583
         width: 348
         height: 249
-      alignment: 9
-      pivot: {x: 0.50000036, y: 0.6011602}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,8 +299,8 @@ TextureImporter:
         y: 179
         width: 349
         height: 252
-      alignment: 9
-      pivot: {x: 0.4927828, y: 0.63993835}
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

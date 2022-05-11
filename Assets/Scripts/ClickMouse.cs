@@ -36,6 +36,7 @@ public class ClickMouse : MonoBehaviour
     public string hovering_over_slot;
 
     private GameObject interacting_num;
+    public GameObject item_holding_gameobj;
 
 
     private void Awake()
@@ -98,6 +99,15 @@ public class ClickMouse : MonoBehaviour
                     Destroy(collected_obj);
                 }
             }
+        }
+
+        if(item != null)
+        {
+            item_holding_gameobj.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>(item.name);
+        }
+        else
+        {
+            item_holding_gameobj.GetComponent<SpriteRenderer>().sprite = null;
         }
     }
 
