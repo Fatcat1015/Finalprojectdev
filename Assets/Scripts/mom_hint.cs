@@ -17,6 +17,8 @@ public class mom_hint : MonoBehaviour
     public Transform pos2;
     public Transform pos3;
 
+    private bool dead;
+
     private void Start()
     {
         hint = GetComponent<TextMeshPro>();
@@ -25,6 +27,11 @@ public class mom_hint : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (dead)
+        {
+            hint.text = dialogue[3];
+            gameObject.transform.position = pos3.position;
+        }else
         if (cake == null)
         {
             hint.text = dialogue[1];
@@ -38,6 +45,7 @@ public class mom_hint : MonoBehaviour
                 {
                     hint.text = dialogue[3];
                     gameObject.transform.position = pos3.position;
+                    dead = true;
                 }
             }
             else

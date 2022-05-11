@@ -9,6 +9,9 @@ public class drawer : MonoBehaviour
     GameObject Drawer3;
     GameObject Drawer4;
 
+    public GameObject hinttext;
+
+
     private void Start()
     {
         Drawer1 = GameObject.Find("drawer1");
@@ -35,6 +38,11 @@ public class drawer : MonoBehaviour
         else
         {
             Drawer4.GetComponent<BoxCollider2D>().enabled = true;
+        }
+
+        if (Drawer2.GetComponent<InteractScript>().interacted)
+        {
+            hinttext.SetActive(false);
         }
     }
 }
