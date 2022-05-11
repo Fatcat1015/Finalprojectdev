@@ -14,6 +14,8 @@ public class TetrisGM : MonoBehaviour
     public int clear_count = 0;
     public GameObject prize;
 
+    public bool won;
+
     private void Start()
     {
         prize.SetActive(false);
@@ -25,9 +27,10 @@ public class TetrisGM : MonoBehaviour
             GameObject.Find("poster3 (1)").GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("poster" + (3-clear_count));
         }
 
-        if(clear_count == 3&&prize!= null)
+        if(clear_count >= 3&&prize!= null)
         {
             playing = false;
+            won = true;
             prize.SetActive(true);
         }
 
