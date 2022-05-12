@@ -10,13 +10,22 @@ public class eyeball : MonoBehaviour
     public bool clicked;
     private bool canclick;
 
+    public AudioSource myAudioSource;
+    bool alreadyPlayed = false;
+
+    private void Start()
+    {
+        myAudioSource = GetComponent<AudioSource>();
+        myAudioSource.playOnAwake = false;
+    }
+
     private void Update()
     {
-            if (on) GetComponent<SpriteRenderer>().sprite = ons;
-            else
-            {
-                GetComponent<SpriteRenderer>().sprite = off;
-            }
+        if (on) GetComponent<SpriteRenderer>().sprite = ons;
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = off;
+        }
 
         if (canclick)
         {
@@ -25,6 +34,16 @@ public class eyeball : MonoBehaviour
                 if (!clicked)
                 {
                     clicked = true;
+                    if (!alreadyPlayed)
+                    {
+                        if (myAudioSource != null)
+                        {
+                            myAudioSource.Play();
+                        }
+                        alreadyPlayed = true;
+                    }
+                    else if (myAudioSource != null) myAudioSource.Stop();
+                    alreadyPlayed = false;
                 }
             }
         }
