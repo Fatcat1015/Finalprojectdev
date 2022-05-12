@@ -10,6 +10,8 @@ public class eyeball : MonoBehaviour
     public bool clicked;
     private bool canclick;
 
+    public AudioClip eyeballsfx;
+
     public AudioSource myAudioSource;
     bool alreadyPlayed = false;
 
@@ -38,7 +40,7 @@ public class eyeball : MonoBehaviour
                     {
                         if (myAudioSource != null)
                         {
-                            myAudioSource.Play();
+                            myAudioSource.PlayOneShot(eyeballsfx);
                         }
                         alreadyPlayed = true;
                     }

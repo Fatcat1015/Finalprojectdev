@@ -24,6 +24,7 @@ public class InteractScript : MonoBehaviour
 
     public AudioSource myAudioSource;
     public AudioClip useItemSound;
+    public AudioClip locked_drawerclip;
 
     bool alreadyPlayed = false;
     bool can_activate;
@@ -168,7 +169,10 @@ public class InteractScript : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-                //myAudioSource.PlayOneShot(Resources.Load<AudioClip>("fail"));
+                if (drawer)
+                {
+                    myAudioSource.PlayOneShot(locked_drawerclip);
+                }
                 wrongitem = false;
             }
         }
@@ -221,11 +225,12 @@ public class InteractScript : MonoBehaviour
             }
         }
         else
-        if(collision.tag == "Player"&& collision.GetComponent<ClickMouse>().item != null)
+        if(collision.tag == "Player")
         {
-            if(collision.GetComponent<ClickMouse>().item.name == Activatedby)
+            if(collision.GetComponent<ClickMouse>().item != null)
             {
-                can_activate = true;
+                if (collision.GetComponent<ClickMouse>().item.name == Activatedby) can_activate = true;
+
             }
             else
             {

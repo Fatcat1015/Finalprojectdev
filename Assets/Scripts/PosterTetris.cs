@@ -6,7 +6,7 @@ public class PosterTetris : MonoBehaviour
 {
 
     public bool falling = true;
-    public int color = 2;
+    public int color = 0;
     public bool match_color_above;
     public GameObject cubeabove;
     public bool matched;

@@ -39,7 +39,7 @@ public class TetrisGM : MonoBehaviour
             //start dispensing cubes
             if(cube == null)
             {
-                int cubecolor = Random.Range(1, 4);//randomnize color
+                int cubecolor = Random.Range(0, 3);//randomnize color
                 cube = Instantiate(cube_prefab, spawnpoint.position, Quaternion.identity) as GameObject;
                 cube.GetComponent<PosterTetris>().color = cubecolor;
                 cube.transform.SetParent(spawnpoint.transform);
