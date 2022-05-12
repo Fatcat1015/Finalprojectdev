@@ -21,6 +21,6 @@ public class Colletable_initial : MonoBehaviour
     public IEnumerator delaybeforecollecting()
     {
             yield return new WaitForSeconds(0.08f);
-            GetComponent<BoxCollider2D>().enabled = true;
+            if(gameObject!= null)GetComponent<BoxCollider2D>().enabled = true;
     }
 }

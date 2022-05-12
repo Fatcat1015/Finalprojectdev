@@ -19,7 +19,7 @@ public class rope : MonoBehaviour
         {
             if (ii.GetComponent<InteractScript>().interacted && iii.GetComponent<InteractScript>().interacted)
             {
-                item.SetActive(true);
+                if(item!= null)item.SetActive(true);
             }
         }
         
