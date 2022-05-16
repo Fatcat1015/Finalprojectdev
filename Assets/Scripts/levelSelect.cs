@@ -42,7 +42,7 @@ public class levelSelect : MonoBehaviour
 
     IEnumerator FadeImage(bool fadeAway, string scenename)
     {
-        img.enabled = true;
+        if(img != null)img.enabled = true;
         // fade from opaque to transparent
         if (fadeAway)
         {
