@@ -6594,10 +6594,10 @@ MonoBehaviour:
   music: {fileID: 483856007}
   rope: {fileID: 531875623}
   dialogue:
-  - I'm so hungry.
+  - That cake looks delicious! Do you mind getting me some?
   - This is probably the best cake I will have for the rest of my life.
-  - I am so tired. I want to rest now.
-  - Thank...you...
+  - No time better like now...
+  - .... why? after all this time?
   pos1: {fileID: 1140100694}
   pos2: {fileID: 484747093}
   pos3: {fileID: 613461537}
@@ -18772,10 +18772,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knife: {fileID: 488429563}
+  mom: {fileID: 27006598}
   dialogue:
   - Happy birthday, son.
-  - I would like to join your mother now.
-  - I'm happy I get to join your mother...
+  - What did you do to your mother?
+  - I should have gotten that divorce...
 --- !u!1 &1434083756
 GameObject:
   m_ObjectHideFlags: 0
@@ -23716,10 +23717,10 @@ MonoBehaviour:
   ice: {fileID: 115073544}
   poison: {fileID: 547354231}
   dialogue:
-  - I need a drink.
+  - Be a good boy and get granpa some drink.
   - Some ice! Can't stand room temperature gin!
-  - I still need something stronger.
-  - Ah...my favorite.
+  - Mmmh, very good very good.
+  - Wha...what did you put in there...
 --- !u!1 &1835309124
 GameObject:
   m_ObjectHideFlags: 0

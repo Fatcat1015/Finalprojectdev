@@ -6,6 +6,7 @@ using TMPro;
 public class dad_hint : MonoBehaviour
 {
     public GameObject knife;
+    public GameObject mom;
 
     private TextMeshPro hint;
 
@@ -23,6 +24,10 @@ public class dad_hint : MonoBehaviour
                 {
                     hint.text = dialogue[1];
                 }
+        else if (mom.activeSelf == true)
+        {
+            hint.text = dialogue[2];
+        }
         else
         {
             hint.text = dialogue[0];
