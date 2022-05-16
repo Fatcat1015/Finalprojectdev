@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoomMovement : MonoBehaviour
 {
     public Room currentRoom;
-    public int horizontal_shift = 1;
+    public float horizontal_shift = 1;
 
     public bool isZoomedin = false;
     public Vector3 beforezoom;
