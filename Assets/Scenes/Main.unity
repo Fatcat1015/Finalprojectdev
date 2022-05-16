@@ -10895,7 +10895,7 @@ MonoBehaviour:
   Mom_done: {fileID: 4667167516276228838, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
   Dad_done: {fileID: -6249031057834043819, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
   Grandpa_done: {fileID: 2378710224108093706, guid: a4d4e239955364e3e90e943f934a91c3, type: 3}
-  OpenDoor: {fileID: -3491923112297647643, guid: 462d4ab3abb094c0997095258bcb89bc, type: 3}
+  OpenDoor: {fileID: 21300000, guid: 1212ec6100a3c5f45a899274304f252d, type: 3}
   a: 0
   b: 0
   c: 0
