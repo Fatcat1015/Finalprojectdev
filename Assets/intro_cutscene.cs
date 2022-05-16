@@ -9,7 +9,7 @@ public class intro_cutscene : MonoBehaviour
 
     private void Start()
     {
-        foreach (Transform child in gameObject.transform)
+        foreach (Transform child in GameObject.Find("Slides").transform)
         {
             Slides.Add(child.gameObject);
         }
@@ -37,7 +37,7 @@ public class intro_cutscene : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("Main");
+            gameObject.GetComponent<levelSelect>().GoToGame();
         }
     }
 }

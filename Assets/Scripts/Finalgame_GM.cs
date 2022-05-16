@@ -58,7 +58,7 @@ public class Finalgame_GM : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
-                    SceneManager.LoadScene("End", LoadSceneMode.Single);
+                    GameObject.Find("lv_manager").GetComponent<levelSelect>().GoToEnd();
                 }
             }
         }
