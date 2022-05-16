@@ -967,9 +967,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Tomorrow it''s my birthday.
+  m_text: 'Tomorrow is my birthday.
 
-    I must do something about them'
+    I have do something about them before they
+    get to me first.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
   m_sharedMaterial: {fileID: -2455056940143091122, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
@@ -1308,7 +1309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ...would murder me, over and over again
+  m_text: ...would murder me. Over and over again
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
   m_sharedMaterial: {fileID: -2455056940143091122, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
@@ -1479,7 +1480,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: father stabbed me with a kitchen knife...
+  m_text: Father stabbed me with a kitchen knife...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
   m_sharedMaterial: {fileID: -2455056940143091122, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
@@ -1688,7 +1689,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: mother strangled me with a rope...
+  m_text: Mother strangled me with a rope...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
   m_sharedMaterial: {fileID: -2455056940143091122, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
@@ -1859,7 +1860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: grandpa put cynaide pills in my drink...
+  m_text: Grandpa put cyanide pills in my drink...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
   m_sharedMaterial: {fileID: -2455056940143091122, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
@@ -2567,7 +2568,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The nightmare which my family...
+  m_text: The nightmare in which my family...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
   m_sharedMaterial: {fileID: -2455056940143091122, guid: 29e8caa9baabdd5408d7e07fee97f565, type: 2}
