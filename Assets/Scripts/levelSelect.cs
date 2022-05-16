@@ -7,7 +7,7 @@ public class levelSelect : MonoBehaviour
 {
     public void GoToMainScene()
     {
-        SceneManager.LoadScene("Main");
+        SceneManager.LoadScene("intro");
     }
 
     public void GoToStartScene()
