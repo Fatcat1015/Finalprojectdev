@@ -18775,8 +18775,8 @@ MonoBehaviour:
   mom: {fileID: 27006598}
   dialogue:
   - Happy birthday, son.
-  - What did you do to your mother?
   - I should have gotten that divorce...
+  - What did you do to your mother?
 --- !u!1 &1434083756
 GameObject:
   m_ObjectHideFlags: 0
