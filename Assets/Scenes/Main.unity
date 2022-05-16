@@ -6594,7 +6594,7 @@ MonoBehaviour:
   music: {fileID: 483856007}
   rope: {fileID: 531875623}
   dialogue:
-  - That cake looks delicious! Do you mind getting me some?
+  - That cake looks delicious! Do you mind getting me a slice?
   - This is probably the best cake I will have for the rest of my life.
   - No time better like now...
   - .... why? after all this time?
@@ -23843,7 +23843,7 @@ MonoBehaviour:
   ice: {fileID: 115073544}
   poison: {fileID: 547354231}
   dialogue:
-  - Be a good boy and get granpa some drink.
+  - Be a good boy and get grandpa something to drink.
   - Some ice! Can't stand room temperature gin!
   - Mmmh, very good very good.
   - Wha...what did you put in there...
