@@ -1018,7 +1018,7 @@ GameObject:
   - component: {fileID: 40947036}
   - component: {fileID: 40947035}
   m_Layer: 0
-  m_Name: greenflagpiece
+  m_Name: Letter E Flag Piece
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1347,7 +1347,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 0
-  Activatedby: BalloonDeflated
+  Activatedby: Deflated Balloon
 --- !u!50 &56088445
 Rigidbody2D:
   serializedVersion: 4
@@ -1653,7 +1653,7 @@ GameObject:
   - component: {fileID: 87812210}
   - component: {fileID: 87812209}
   m_Layer: 0
-  m_Name: cake slice
+  m_Name: A Slice of Cake
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1847,7 +1847,7 @@ MonoBehaviour:
   useItemSound: {fileID: 0}
   locked_drawerclip: {fileID: 0}
   interval: 0
-  Activatedby: Kettle full
+  Activatedby: Kettle with Water
 --- !u!50 &99729030
 Rigidbody2D:
   serializedVersion: 4
@@ -5334,7 +5334,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 1
-  Activatedby: cake slice
+  Activatedby: A Slice of Cake
 --- !u!82 &356822512
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5659,7 +5659,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 0
-  Activatedby: blueflagpiece
+  Activatedby: Letter A Flag Piece
 --- !u!82 &361107768
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6113,7 +6113,7 @@ GameObject:
   - component: {fileID: 426249887}
   - component: {fileID: 426249890}
   m_Layer: 0
-  m_Name: Kettle full
+  m_Name: Kettle with Water
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6615,7 +6615,7 @@ GameObject:
   - component: {fileID: 466320547}
   - component: {fileID: 466320546}
   m_Layer: 0
-  m_Name: key
+  m_Name: Key
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6860,7 +6860,7 @@ MonoBehaviour:
   useItemSound: {fileID: 0}
   locked_drawerclip: {fileID: 0}
   interval: 1
-  Activatedby: greenflagpiece
+  Activatedby: Letter E Flag Piece
 --- !u!82 &467245794
 AudioSource:
   m_ObjectHideFlags: 0
@@ -7206,7 +7206,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: 0e57a8ffab647440283cdf0b3c4c753b, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 1
-  Activatedby: knife
+  Activatedby: Knife
 --- !u!82 &488429566
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8160,7 +8160,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: 4811fa6f7af714df5abe0b9a7acc1aa3, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 1
-  Activatedby: poison
+  Activatedby: Poison
 --- !u!82 &547354235
 AudioSource:
   m_ObjectHideFlags: 0
@@ -8730,7 +8730,7 @@ GameObject:
   - component: {fileID: 554208379}
   - component: {fileID: 554208378}
   m_Layer: 0
-  m_Name: knife
+  m_Name: Knife
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11029,7 +11029,7 @@ Transform:
   m_LocalPosition: {x: 9.5, y: 9.35, z: 976.7265}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 871195389}
+  - {fileID: 999539520}
   m_Father: {fileID: 1449284966}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 6.942}
@@ -11666,7 +11666,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 0
-  Activatedby: Kettle Empty
+  Activatedby: Empty Kettle
 --- !u!50 &707018566
 Rigidbody2D:
   serializedVersion: 4
@@ -13021,7 +13021,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 871195388}
   m_LocalRotation: {x: -0, y: -0, z: -0.01946829, w: 0.99981046}
-  m_LocalPosition: {x: -4.3418603, y: 11.550113, z: 0}
+  m_LocalPosition: {x: -0.8218446, y: 0.07011795, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2090151296}
@@ -13033,7 +13033,7 @@ Transform:
   - {fileID: 210066901}
   - {fileID: 1474085370}
   - {fileID: 467245791}
-  m_Father: {fileID: 666911741}
+  m_Father: {fileID: 999539520}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &891535256
@@ -14752,6 +14752,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &999539519
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 999539520}
+  m_Layer: 0
+  m_Name: pos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &999539520
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999539519}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.52, y: 11.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 871195389}
+  m_Father: {fileID: 666911741}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1016428921
 GameObject:
   m_ObjectHideFlags: 0
@@ -17417,7 +17448,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: 4f0d5efde08d846f6a499cc8308154b7, type: 3}
   locked_drawerclip: {fileID: 8300000, guid: a785c5e69ecb54bfe82aafa8b7da7c13, type: 3}
   interval: 0
-  Activatedby: key
+  Activatedby: Key
 --- !u!82 &1302795978
 AudioSource:
   m_ObjectHideFlags: 0
@@ -19370,7 +19401,7 @@ MonoBehaviour:
   useItemSound: {fileID: 0}
   locked_drawerclip: {fileID: 0}
   interval: 1
-  Activatedby: Kettle full
+  Activatedby: Kettle with Water
 --- !u!50 &1461764036
 Rigidbody2D:
   serializedVersion: 4
@@ -19882,7 +19913,7 @@ GameObject:
   - component: {fileID: 1487455730}
   - component: {fileID: 1487455729}
   m_Layer: 0
-  m_Name: Balloon full
+  m_Name: Balloon with Water
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20353,7 +20384,7 @@ GameObject:
   - component: {fileID: 1527520436}
   - component: {fileID: 1527520439}
   m_Layer: 0
-  m_Name: Kettle boiled water
+  m_Name: Kettle with Boiled Water
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21016,7 +21047,7 @@ GameObject:
   - component: {fileID: 1607510640}
   - component: {fileID: 1607510639}
   m_Layer: 0
-  m_Name: poison
+  m_Name: Poison
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22131,7 +22162,7 @@ GameObject:
   - component: {fileID: 1705738178}
   - component: {fileID: 1705738177}
   m_Layer: 0
-  m_Name: BalloonDeflated
+  m_Name: Deflated Balloon
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22829,7 +22860,7 @@ GameObject:
   - component: {fileID: 1751075429}
   - component: {fileID: 1751075428}
   m_Layer: 0
-  m_Name: blueflagpiece
+  m_Name: Letter A Flag Piece
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25315,8 +25346,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1957478573}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.84, y: 0.92, z: 0}
-  m_LocalScale: {x: 1.1605992, y: 1.494, z: 1}
+  m_LocalPosition: {x: 7.1, y: 0.1324, z: 0}
+  m_LocalScale: {x: 1.3029007, y: 1.1427343, z: 1}
   m_Children: []
   m_Father: {fileID: 2090151296}
   m_RootOrder: 0
@@ -25419,7 +25450,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.019437313, y: 0}
+  m_Offset: {x: 0.031053454, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -25430,7 +25461,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.231978, y: 1.86}
+  m_Size: {x: 1.0899639, y: 1.86}
   m_EdgeRadius: 0
 --- !u!1 &1974972683 stripped
 GameObject:
@@ -26302,7 +26333,7 @@ GameObject:
   - component: {fileID: 2035513849}
   - component: {fileID: 2035513848}
   m_Layer: 0
-  m_Name: Kettle boiled water
+  m_Name: Kettle with Boiled Water
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
