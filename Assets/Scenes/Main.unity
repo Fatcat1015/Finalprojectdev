@@ -5142,7 +5142,7 @@ MonoBehaviour:
   useItemSound: {fileID: 0}
   locked_drawerclip: {fileID: 0}
   interval: 0
-  Activatedby: Kettle boiled water
+  Activatedby: Kettle with Boiled Water
 --- !u!82 &355130477
 AudioSource:
   m_ObjectHideFlags: 0
@@ -6402,7 +6402,7 @@ Transform:
   m_GameObject: {fileID: 432667593}
   m_LocalRotation: {x: -0, y: -0, z: 0.05709259, w: 0.9983689}
   m_LocalPosition: {x: 5.79, y: -4.28, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1664408777}
   m_RootOrder: 1
@@ -7072,7 +7072,7 @@ MonoBehaviour:
   conflicted: 0
   conflict_obj: {fileID: 0}
   myAudioSource: {fileID: 0}
-  useItemSound: {fileID: 0}
+  useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 1
   Activatedby: Letter E Flag Piece
@@ -14095,7 +14095,7 @@ Transform:
   m_GameObject: {fileID: 936522898}
   m_LocalRotation: {x: -0, y: -0, z: 0.52694076, w: -0.84990203}
   m_LocalPosition: {x: 5.74, y: 4.61, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1664408777}
   m_RootOrder: 2
@@ -16485,7 +16485,7 @@ MonoBehaviour:
   useItemSound: {fileID: 8300000, guid: c78e8334e5b6046609790bc7b08d7b21, type: 3}
   locked_drawerclip: {fileID: 0}
   interval: 0
-  Activatedby: Balloon full
+  Activatedby: Balloon with Water
 --- !u!50 &1085063760
 Rigidbody2D:
   serializedVersion: 4
@@ -16895,7 +16895,7 @@ Transform:
   m_GameObject: {fileID: 1189461139}
   m_LocalRotation: {x: -0, y: -0, z: -0.966577, w: -0.25637656}
   m_LocalPosition: {x: -7.61, y: -4.31, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1664408777}
   m_RootOrder: 0
@@ -25370,7 +25370,7 @@ Transform:
   m_GameObject: {fileID: 1903907289}
   m_LocalRotation: {x: -0, y: -0, z: 0.99663234, w: 0.08200069}
   m_LocalPosition: {x: -7.66, y: 4.78, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1664408777}
   m_RootOrder: 3
@@ -27367,7 +27367,7 @@ GameObject:
   - component: {fileID: 2066708206}
   - component: {fileID: 2066708205}
   m_Layer: 0
-  m_Name: Kettle Empty
+  m_Name: Empty Kettle
   m_TagString: Collectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
