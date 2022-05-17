@@ -20,6 +20,7 @@ public class GrowingEyeballs : MonoBehaviour
 
     public GameObject on;
     public GameObject off;
+    public GameObject eyebg;
 
     private void Start()
     {
@@ -32,6 +33,9 @@ public class GrowingEyeballs : MonoBehaviour
         }
 
         GameMaster = GM.GetComponent<Finalgame_GM>();
+
+        eyebg = GameObject.Find("EyeManager");
+        eyebg.SetActive(false);
     }
 
     private void Update()
@@ -62,6 +66,7 @@ public class GrowingEyeballs : MonoBehaviour
                             {
                                 Phase = 3;
                                 currentPhase = thirdPhase;
+                                eyebg.SetActive(true);
                             }
                         }
                     }
