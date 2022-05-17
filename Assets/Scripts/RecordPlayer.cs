@@ -29,7 +29,7 @@ public class RecordPlayer : MonoBehaviour
 
         strangled = GameObject.Find("rope slot");
 
-        stamp = GameObject.Find("stamp3");
+        stamp = GameObject.Find("Stamp3");
         stamp.SetActive(false);
 
         Record = GameObject.Find("RecordSlot");

@@ -17,7 +17,7 @@ public class eyeball_game : MonoBehaviour
             eyeball.Add(child.gameObject);
         }
 
-        cake_slice = GameObject.Find("cake slice");
+        cake_slice = GameObject.Find("A Slice of Cake");
         cake_slice.SetActive(false);
     }
 
